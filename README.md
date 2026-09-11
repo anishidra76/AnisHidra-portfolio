@@ -9,6 +9,7 @@
 # Overview
 
 =>  This is my personal full-stack portfolio, designed not only to showcase my work and technical skills, but also to provide a complete system for managing the website and its business data.
+
 =>  The platform combines a responsive React frontend with a Django REST API and a protected dashboard for managing portfolio content, messages, visitors, clients, projects, income, and expenses.
 
 
@@ -31,6 +32,7 @@
     ---> Contact
 
 =>  Dashboard
+
     ---> Overview
         --> Total visitors
         --> Monthly visitors
@@ -53,12 +55,14 @@
         --> Message Box from "Contact Page"
 
 =>  Responsive Design
+
     ---> Desktop
     ---> Laptop
     ---> Tablet
     ---> Mobile devices
 
 =>  Design Background and Pages
+
     ---> (Blue+Purple) UI
     ---> Aurora-inspired visual effects
     ---> A celestial touch with stars
@@ -76,15 +80,19 @@
 # Tech Stack
 
 =>  Frontend
+
     ---> JavaScript - Html5 - Css3 - Jsx - React - Font Awesome
 
 =>  Backend
+
     ---> Python - Django - Django REST Framework - Django-cors-headers - Token Authentication
 
 =>  Database
+
     ---> SQLite
 
 =>  Deployment
+
     ---> Gunicorn - Nginx - Namecheap - Render
 
 
@@ -141,6 +149,7 @@
 # Getting Started
 
 =>  Prerequisites, make sure you have the following installed:
+
     ---> Python 3.14
     ---> pip3
     ---> Node.js
@@ -148,6 +157,7 @@
     ---> Git
 
 =>  Clone the Repository
+
     ---> git clone YOUR_GITHUB_REPOSITORY_URL
     ---> cd AnisHidra
 
@@ -158,6 +168,7 @@
 # Local Development
 
 =>  Backend:
+
     ---> cd backend_anishidra
     ---> python3 -m venv .venv
     ---> source .venv/bin/activate
@@ -170,21 +181,25 @@
     ---> python manage.py runserver
 
 =>  Environment Variables:
+
     ---> SECRET_KEY=your-secret-key
     ---> DEBUG=True
     ---> note: Create a .env file inside the backend directory. Additional environment variables may be required depending on the deployment configuration. Never commit your .env file or production credentials to GitHub.
 
 =>  Database:
+
     ---> python3 manage.py makemigrations
     ---> python3 manage.py migrate
     ---> python3 manage.py createsuperuser
 
 =>  Frontend:
+
     ---> cd frontend_anishidra
     ---> npm install
     ---> npm run dev
 
 =>  API:
+
     ---> note: The frontend communicates with the Django backend through REST API endpoints. The API is responsible for dynamically providing portfolio content such as "pam". The API also provides authenticated endpoints for protected dashboard operations.
     ---> pam:
         --> Home statics
@@ -199,6 +214,7 @@
         --> Management data
 
 =>  Security:
+
     ---> Environment variables for sensitive configuration
     ---> Token-based authentication
     ---> Protected dashboard endpoints

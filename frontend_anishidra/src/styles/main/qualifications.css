@@ -1,0 +1,519 @@
+/* ----- Qualifications Section ----- */
+
+
+.educationtop {
+  margin-top: 100px;
+}
+.qual-block {
+  padding-bottom: 100px;
+  width: 80%;
+}
+.qual-block h3 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--primary-sky);
+  display: flex;
+  justify-content: center;
+}
+ 
+/* Education Track */
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.edu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+.edu-meta {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+.edu-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  border: 1px solid var(--primary-sky);
+  color: var(--primary-sky);
+  white-space: nowrap;
+}
+.educdev h4 {
+  margin-bottom: 20px;
+}
+.educdev span {
+  margin: 0 20px;
+}
+ 
+/* Certifications Grid */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  
+}
+
+.cert-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 6px;
+  margin-bottom: 40px;
+}
+.cert-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 0.8rem;
+}
+ 
+/* Modal for Certificate View */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+.modal.open {
+  display: flex;
+}
+.modal img {
+  width: 80%;
+  height: 80%;
+  border-radius: 80px;
+  box-shadow: 0 0 200px rgba(0, 240, 255, 0.5);
+}
+.modal-close {
+  position: absolute;
+  top: 24px;
+  right: 30px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-main);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.modal-close:hover {
+  color: var(--primary-sky);
+  border-color: var(--primary-sky);
+}
+ 
+/* Badges Horizontal Slider */
+.badge-slider-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-sky) transparent;
+}
+.badge-item {
+  display: inline-block;
+  width: 160px;
+  text-align: center;
+  margin-right: 15px;
+  white-space: normal;
+}
+.badge-item i {
+  font-size: 2.5rem;
+  color: var(--primary-sky);
+  margin-bottom: 8px;
+}
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 15px;
+  gap: 100px;
+}
+.profile-chip {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: var(--text-main);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: border-color 0.3s, background 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.profile-chip:hover {
+  border-color: var(--primary-purple);
+  background: rgba(112, 0, 255, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   QUALIFICATIONS — RESPONSIVE
+   ========================================================================== */
+
+
+/* ==========================================================================
+   TABLET — 769px to 1024px
+   ========================================================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  #qualifications .section-title {
+    font-size: 3rem;
+    margin-bottom: 60px;
+  }
+
+  .qual-block {
+    width: 90%;
+    padding-bottom: 70px;
+  }
+
+  .qual-block h3 {
+    font-size: 1.7rem;
+    margin-bottom: 30px;
+  }
+
+  /* Education */
+
+  .edu-item {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .educdev {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .educdev h4 {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  .educdev span {
+    margin: 0 10px;
+  }
+
+  .edu-meta {
+    font-size: 0.78rem;
+  }
+
+  .edu-badge {
+    font-size: 0.72rem;
+  }
+
+  /* Certifications */
+
+  .cert-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .cert-card {
+    padding: 18px;
+  }
+
+  .cert-card img {
+    height: 170px;
+    margin-bottom: 25px;
+  }
+
+  .cert-card h4 {
+    font-size: 0.9rem;
+  }
+
+  .cert-actions {
+    gap: 8px;
+  }
+
+  .btn-sm {
+    padding: 6px 10px;
+    font-size: 0.72rem;
+  }
+
+  /* Modal */
+
+  .modal img {
+    width: 85%;
+    height: 75%;
+    border-radius: 35px;
+  }
+}
+
+
+/* ==========================================================================
+   MOBILE — 768px and below
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+  #qualifications .section-title {
+    font-size: clamp(2.3rem, 9vw, 3rem);
+    margin-bottom: 45px;
+  }
+
+  .qual-block {
+    width: 100%;
+    padding-bottom: 60px;
+  }
+
+  .qual-block h3 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  /* ------------------------------------------------------------------------
+     EDUCATION
+     ------------------------------------------------------------------------ */
+
+  .edu-list {
+    gap: 12px;
+  }
+
+  .edu-item {
+    width: 100%;
+    padding: 18px;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 15px;
+    margin-bottom: 12px;
+  }
+
+  .educdev {
+    width: 100%;
+  }
+
+  .educdev h4 {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .educdev span {
+    margin: 0 7px;
+  }
+
+  .edu-meta {
+    font-size: 0.72rem;
+    line-height: 1.5;
+  }
+
+  .edu-badge {
+    align-self: flex-start;
+    font-size: 0.68rem;
+    padding: 4px 9px;
+  }
+
+  /* ------------------------------------------------------------------------
+     CERTIFICATIONS
+     ------------------------------------------------------------------------ */
+
+  .cert-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .cert-card {
+    width: 100%;
+    padding: 18px;
+  }
+
+  .cert-card img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+
+  .cert-card h4 {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .cert-actions {
+    width: 100%;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .btn-sm {
+    padding: 6px 11px;
+    font-size: 0.7rem;
+  }
+
+  /* ------------------------------------------------------------------------
+     MODAL
+     ------------------------------------------------------------------------ */
+
+  .modal {
+    padding: 20px;
+  }
+
+  .modal img {
+    width: 92%;
+    height: auto;
+    max-height: 75vh;
+    object-fit: contain;
+    border-radius: 20px;
+  }
+
+  .modal-close {
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+  }
+
+  /* ------------------------------------------------------------------------
+     OTHER QUALIFICATION ELEMENTS
+     ------------------------------------------------------------------------ */
+
+  .profile-links {
+    gap: 15px;
+    padding-top: 15px;
+  }
+
+  .profile-chip {
+    font-size: 0.75rem;
+    padding: 7px 12px;
+  }
+}
+
+
+/* ==========================================================================
+   SMALL MOBILE — 480px and below
+   ========================================================================== */
+
+@media (max-width: 480px) {
+
+  #qualifications .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 35px;
+  }
+
+  .qual-block {
+    padding-bottom: 45px;
+  }
+
+  .qual-block h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+
+  /* Education */
+
+  .edu-item {
+    padding: 15px;
+  }
+
+  .educdev h4 {
+    font-size: 0.75rem;
+  }
+
+  .educdev span {
+    margin: 0 5px;
+  }
+
+  .edu-meta {
+    font-size: 0.65rem;
+  }
+
+  .edu-badge {
+    font-size: 0.62rem;
+  }
+
+  /* Certificates */
+
+  .cert-grid {
+    gap: 15px;
+  }
+
+  .cert-card {
+    padding: 15px;
+  }
+
+  .cert-card img {
+    max-height: 200px;
+    margin-bottom: 16px;
+  }
+
+  .cert-card h4 {
+    font-size: 0.75rem;
+  }
+
+  .cert-actions {
+    flex-direction: column;
+  }
+
+  .cert-actions .btn-sm {
+    width: 100%;
+    justify-content: center;
+    min-height: 40px;
+  }
+
+  /* Modal */
+
+  .modal img {
+    width: 94%;
+    max-height: 70vh;
+    border-radius: 15px;
+  }
+
+  .modal-close {
+    top: 10px;
+    right: 10px;
+  }
+
+  .profile-links {
+    gap: 10px;
+  }
+
+  .profile-chip {
+    font-size: 0.68rem;
+    padding: 6px 10px;
+  }
+}

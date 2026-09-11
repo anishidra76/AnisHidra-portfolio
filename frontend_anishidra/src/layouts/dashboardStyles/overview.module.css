@@ -1,0 +1,500 @@
+/* =========================================================
+   DESIGN TOKENS (see dashboard.module.css for the source of truth)
+========================================================= */
+
+:global(:root) {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --bg-void: #05060f;
+  --bg-base: #090b1c;
+
+  --aurora-magenta: #b34fd6;
+  --aurora-violet: #7a4dff;
+  --aurora-teal: #2fd9c4;
+  --aurora-cyan: #38bdf8;
+  --aurora-green: #34d399;
+
+  --text-primary: #f5f6fb;
+  --text-secondary: #9aa0ba;
+  --text-tertiary: #6c7290;
+
+  --glass-01: rgba(255, 255, 255, 0.03);
+  --glass-02: rgba(255, 255, 255, 0.05);
+  --glass-03: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.09);
+  --glass-border-strong: rgba(255, 255, 255, 0.16);
+
+  --accent: #8b6cf2;
+  --accent-strong: #a685ff;
+  --accent-teal: #2fd9c4;
+
+  --success: #3ddc9a;
+  --danger: #ff6b81;
+  --warning: #e7b968;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+
+  --shadow-glass: 0 10px 34px rgba(2, 4, 16, 0.45);
+  --shadow-glass-sm: 0 6px 18px rgba(2, 4, 16, 0.35);
+
+  --ease: cubic-bezier(.4, 0, .2, 1);
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.overview {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+  color: var(--text-primary);
+}
+
+
+/* Heading */
+
+.heading {
+  margin-bottom: 26px;
+}
+
+.heading span {
+  color: var(--accent-strong);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.heading h2 {
+  margin: 8px 0 6px;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+.heading p {
+  margin: 0;
+  color: var(--text-tertiary);
+  font-size: 13px;
+}
+
+
+/* Error */
+
+.error {
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 107, 129, 0.12);
+  border: 1px solid rgba(255, 107, 129, 0.25);
+  color: #ffc1cb;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   STAT CARDS
+========================================================= */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.card {
+  position: relative;
+  min-height: 122px;
+  padding: 20px;
+  box-sizing: border-box;
+
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.02));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  box-shadow: var(--shadow-glass-sm);
+  overflow: hidden;
+
+  transition: transform 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--glass-border-strong);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  right: -40px;
+  bottom: -50px;
+  border-radius: 50%;
+  background: rgba(47, 217, 196, 0.16);
+  filter: blur(28px);
+}
+
+.card span {
+  position: relative;
+  color: var(--text-tertiary);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.card strong {
+  position: relative;
+  display: block;
+  margin: 14px 0 5px;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  font-variant-numeric: tabular-nums;
+}
+
+.card small {
+  position: relative;
+  color: var(--text-tertiary);
+  font-size: 11px;
+}
+
+.income {
+  color: var(--success);
+}
+
+.expense {
+  color: var(--danger);
+}
+
+
+/* =========================================================
+   GRID / PANELS
+========================================================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 18px;
+  margin-bottom: 18px;
+  align-items: start;
+}
+
+.panel {
+  min-width: 0;
+  padding: 22px;
+  box-sizing: border-box;
+
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+
+  background: var(--glass-02);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  box-shadow: var(--shadow-glass-sm);
+  margin-bottom: 18px;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.panelHeader h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.panelHeader p {
+  margin: 4px 0 0;
+  color: var(--text-tertiary);
+  font-size: 11px;
+}
+
+.panelHeader button {
+  flex-shrink: 0;
+  border: none;
+  background: var(--glass-02);
+  border: 1px solid var(--glass-border);
+  padding: 7px 12px;
+  border-radius: var(--radius-sm);
+  color: var(--accent-strong);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  transition: background 0.2s var(--ease), transform 0.2s var(--ease);
+}
+
+.panelHeader button:hover {
+  background: rgba(139, 108, 242, 0.14);
+  transform: translateY(-1px);
+}
+
+
+/* Chart */
+
+.chartPlaceholder {
+  width: 100%;
+  min-height: 300px;
+}
+
+:global(.recharts-cartesian-grid-horizontal) line,
+:global(.recharts-cartesian-grid-vertical) line {
+  stroke: rgba(255, 255, 255, 0.06);
+}
+
+:global(.recharts-cartesian-axis-tick) text {
+  fill: var(--text-tertiary);
+  font-size: 11px;
+  font-family: var(--font-sans);
+}
+
+:global(.recharts-default-tooltip) {
+  background: rgba(10, 12, 26, 0.94) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-glass-sm);
+  font-family: var(--font-sans) !important;
+  font-size: 12px !important;
+}
+
+:global(.recharts-tooltip-label) {
+  color: var(--text-primary) !important;
+  font-weight: 600 !important;
+}
+
+:global(.recharts-tooltip-item) {
+  color: var(--text-secondary) !important;
+}
+
+
+/* =========================================================
+   CLIENTS
+========================================================= */
+
+.clientList {
+  display: flex;
+  flex-direction: column;
+}
+
+.clientItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+
+  padding: 13px 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.clientItem:last-child {
+  border-bottom: none;
+}
+
+.clientItem > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.clientItem > div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.clientItem strong {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.clientItem small {
+  color: var(--text-tertiary);
+  font-size: 11px;
+}
+
+
+/* Status pill (shared by client + message rows) */
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 5px 10px;
+  border-radius: 20px;
+
+  background: var(--glass-02);
+  border: 1px solid var(--glass-border);
+
+  color: var(--text-secondary);
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: blue;
+}
+.Cancelled::before {
+  background-color: red;
+}
+.Delivered::before {
+  background-color: green;
+}
+
+
+/* =========================================================
+   MESSAGES
+========================================================= */
+
+.messageList {
+  display: flex;
+  flex-direction: column;
+}
+
+.messageItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+
+  padding: 13px 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.messageItem:last-child {
+  border-bottom: none;
+}
+
+.messageItem > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.messageItem > div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.messageItem strong {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.messageItem small {
+  color: var(--text-tertiary);
+  font-size: 11px;
+}
+
+.messageItem > div:last-child span {
+  color: var(--accent-strong);
+  font-size: 12px;
+  font-weight: 600;
+  max-width: 220px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.empty {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-tertiary);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chartPlaceholder {
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .heading h2 {
+    font-size: 23px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: 100px;
+    padding: 16px;
+  }
+
+  .card strong {
+    font-size: 22px;
+  }
+
+  .panel {
+    padding: 16px;
+  }
+
+  .clientItem,
+  .messageItem {
+    align-items: flex-start;
+  }
+
+  .messageItem > div:last-child {
+    text-align: right;
+  }
+}

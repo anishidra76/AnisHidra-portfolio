@@ -1,0 +1,256 @@
+/* ==========================================================================
+   1. VARIABLES & BASE STYLES
+   ========================================================================== */
+:root {
+  --bg-dark: #030712;
+  --bg-navy: #0b132b;
+  --primary-purple: #7000ff;
+  --primary-sky: #00f0ff;
+  --accent-blue: #1c2541;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --level-low: #ef4444;
+  --level-med: #eab308;
+  --level-high: #22c55e;
+ 
+  --nav-height: 70px;
+  --nav-height-mobile: 60px;
+}
+ 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ 
+html {
+  scroll-behavior: smooth;
+  font-size: 20px;
+}
+ 
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  display: flex;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+ 
+/* Aurora Canvas Background */
+#aurora-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+ 
+/* Skip link for keyboard/screen-reader users */
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 10px;
+  background: var(--primary-sky);
+  color: var(--bg-dark);
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 700;
+  z-index: 3000;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 10px;
+}
+ 
+/* Visible keyboard focus states everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--primary-sky);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+ 
+/* ==========================================================================
+   2. REUSABLE EFFECTS (Gradients, Glow, Shimmer)
+   ========================================================================== */
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary-sky), var(--primary-purple));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+ 
+.btn-gradient,
+.btn-outline {
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+ 
+.btn-gradient {
+  background: linear-gradient(135deg, var(--primary-sky), var(--primary-purple));
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 240, 255, 0.2);
+}
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(112, 0, 255, 0.4);
+}
+ 
+.btn-outline {
+  background: transparent;
+  color: var(--primary-sky);
+  border: 1px solid rgba(0, 240, 255, 0.4);
+}
+.btn-outline:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary-sky);
+  background: rgba(0, 240, 255, 0.08);
+}
+ 
+.glow-card {
+  background: rgba(11, 19, 43, 0.7);
+  border: 1px solid rgba(0, 240, 255, 0.15);
+  border-radius: 12px;
+  padding: 24px;
+  backdrop-filter: blur(10px);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+.glow-card:hover {
+  border-color: var(--primary-sky);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.25);
+  transform: translateY(-3px);
+}
+ 
+/* Shimmer Effect */
+.shimmer-box {
+  position: relative;
+  overflow: hidden;
+}
+.shimmer-box::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 70%
+  );
+  transform: rotate(30deg);
+  animation: shimmer 6s infinite;
+}
+@keyframes shimmer {
+  0% { transform: translateX(-100%) rotate(30deg); }
+  100% { transform: translateX(100%) rotate(30deg); }
+}
+ 
+ 
+/* ==========================================================================
+   4. MAIN CONTENT CONTAINER
+   ========================================================================== */
+.main-wrapper {
+  padding-top: 50px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+}
+ 
+.content {
+  flex: 1;
+  padding: 0px 20px;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+ 
+section {
+  padding-top: 0px;
+  margin-bottom: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Offsets the fixed nav so anchor jumps don't hide content behind it */
+  scroll-margin-top: var(--nav-height);
+}
+ 
+.section-title {
+  font-size: 3.5rem;
+  margin-bottom: 80px;
+  position: relative;
+  text-align: center;
+  padding-bottom: 18px;
+}
+.section-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 40px;
+  text-align: center;
+  max-width: 600px;
+}
+ 
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-sky), var(--primary-purple));
+}
+
+
+/* ----- Back to Top ----- */
+.back-to-top {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, var(--primary-sky), var(--primary-purple));
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  z-index: 900;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.back-to-top:hover {
+  transform: translateY(-3px);
+}

@@ -231,15 +231,24 @@
 
 # Links
 
-=>  Live Portfolio  ---> https://anishidra.com
-=>  GitHub          ---> https://github.com/anishidra76
-=>  LinkedIn        ---> https://linkedin.com/in/anishidra76
-=>  Discord         ---> https://discord.com/users/1522648106154463356
-=>  X (Twitter)     ---> https://x.com/anishidra76
 
-=> Email            ---> anishidracontact@gmail.com
-=> Whatsapp         ---> https://wa.me/message/5B6WBDXWYVSWM1   --->  +213541174042
-=> Telegram         ---> https://t.me/anishidra76   --->  @anishidra76
+    =>  Live Portfolio  ---> https://anishidra.com
+
+    =>  GitHub          ---> https://github.com/anishidra76
+
+    =>  LinkedIn        ---> https://linkedin.com/in/anishidra76
+
+    =>  Discord         ---> https://discord.com/users/1522648106154463356
+
+    =>  X (Twitter)     ---> https://x.com/anishidra76
+
+    => Email            ---> anishidracontact@gmail.com
+
+    => Whatsapp         ---> https://wa.me/message/5B6WBDXWYVSWM1
+                        --->  +213541174042
+                    
+    => Telegram         ---> https://t.me/anishidra76
+                        --->  @anishidra76
 
 
 

@@ -1,0 +1,17 @@
+asgiref==3.12.1
+certifi==2026.7.22
+cloudinary==1.46.2
+dj-database-url==3.1.2
+Django==6.1.1
+django-cors-headers==4.9.0
+djangorestframework==3.18.0
+gunicorn==26.2.0
+pillow==12.3.0
+psycopg==3.3.5
+psycopg-binary==3.3.5
+psycopg2-binary==2.9.13
+python-dotenv==1.2.3
+six==1.17.0
+sqlparse==0.6.0
+urllib3==2.7.0
+whitenoise==6.12.0

@@ -64,6 +64,8 @@ build/
 
 .vite/
 
+src/api.js
+
 
 
 

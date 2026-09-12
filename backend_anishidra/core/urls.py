@@ -37,7 +37,7 @@ urlpatterns = [
     path('api/contact/', include('applications.contact.urls')),
     path('api/management/', include('applications.management.urls')),
     path('api/visitors/', include('applications.visitors.urls')),
-    path('api/visitors/', include('applications.visitors.healthurls')),
+    path('api/visitorsh/', include('applications.visitors.healthurls')),
 ]
 
 if settings.DEBUG:

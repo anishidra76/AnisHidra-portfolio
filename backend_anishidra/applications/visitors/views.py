@@ -17,20 +17,9 @@ class VisitorViewSet(ModelViewSet):
 
     @action(detail=False, methods=["get"])
     def test_visit(self, request):
-        ip_address = "".join(
-            str(random.randint(1, 254))
-            for _ in range(4)
-        )
-        visitor = Visitor.objects.create(
-            ip_address=ip_address
-        )
-        return Response(
-            {
-                "user_agent": "Visitor",
-                "ip_address": visitor.ip_address,
-                "visited_at": visitor.visited_at
-            }
-        )
+        return Response({
+            "message": "Anis Hidra"
+        })
 
 def health_check(request):
     return JsonResponse({"status":"ok"})

@@ -169,10 +169,12 @@ MAILERS = {
 
 CORS_ALLOWED_ORIGINS = [
     "https://anishidra.com",
+    "https://www.anishidra.com",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://anishidra.com",
+    "https://www.anishidra.com",
 ]
 
 

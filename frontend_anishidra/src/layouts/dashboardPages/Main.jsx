@@ -23,8 +23,6 @@ const Main = () => {
         return response.json();
       })
       .then((data) => {
-        console.log("HOME DATA:", data);
-
         if(data.length > 0) {
           const home = data[0];
           setHomeID(home.id);
@@ -34,7 +32,6 @@ const Main = () => {
       })
       .catch((error) => {
         console.error("Error:", error);
-        alert("HOME FETCH ERROR: ", + error.message)
       })
   }, []);
 

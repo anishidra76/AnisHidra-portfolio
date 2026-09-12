@@ -23,6 +23,8 @@ const Main = () => {
         return response.json();
       })
       .then((data) => {
+        console.log("HOME DATA:", data);
+
         if(data.length > 0) {
           const home = data[0];
           setHomeID(home.id);

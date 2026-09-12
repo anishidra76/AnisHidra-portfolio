@@ -34,6 +34,7 @@ const Main = () => {
       })
       .catch((error) => {
         console.error("Error:", error);
+        alert("HOME FETCH ERROR: ", + error.message)
       })
   }, []);
 

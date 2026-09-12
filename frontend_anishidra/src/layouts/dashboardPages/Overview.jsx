@@ -30,7 +30,7 @@ const API = {
         `${API_URL}/api/contact/contactmessages/`,
 
     visitors:
-        `${API_URL}/api/visitors/`,
+        `${API_URL}/`,
 
 };
 

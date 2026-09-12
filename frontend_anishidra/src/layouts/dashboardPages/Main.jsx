@@ -36,7 +36,7 @@ const Main = () => {
   }, []);
 
   const saveHome = () => {
-    if(!homeID) {
+    if(!homeID?.id) {
       alert("Home data not found.");
       return <p>Loading...</p>;
     }
@@ -45,7 +45,7 @@ const Main = () => {
       projectsCompleted: projectsCompleted,
     };
 
-    fetch(`${API_URL}/api/home/homestatics/${homeID}/`, {
+    fetch(`${API_URL}/api/home/homestatics/${homeID.id}/`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

@@ -28,12 +28,11 @@ def home_page(request):
 
 
 urlpatterns = [
-    path('', home_page, name="home"),
     path('admin/', admin.site.urls),
 
     path('api/login/', obtain_auth_token),
     
-    path('api/home/', include('applications.home.urls')),
+    path('api/home/', include('applications.home.urls'), home_page),
     path('api/about/', include('applications.about.urls')),
     path('api/skills/', include('applications.skills.urls')),
     path('api/qualifications/', include('applications.qualifications.urls')),

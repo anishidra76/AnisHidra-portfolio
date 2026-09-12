@@ -1,9 +1,9 @@
 from rest_framework.routers import DefaultRouter
-from .views import HomeStaticViewSet, health_check
+from .views import HomeStaticViewSet
 
 
 router = DefaultRouter()
 
-router.register('homestatics', HomeStaticViewSet, health_check)
+router.register('homestatics', HomeStaticViewSet)
 
 urlpatterns = router.urls

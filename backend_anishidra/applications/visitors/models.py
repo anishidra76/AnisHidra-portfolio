@@ -6,4 +6,4 @@ class Visitor(models.Model):
     user_agent = models.TextField(blank=True, null=True)
     visited_at = models.DateTimeField(auto_now_add=True)
     def __str__(self):
-        return f"{self.ip_adress} - {self.visited_at}"
+        return f"{self.ip_address} - {self.visited_at}"

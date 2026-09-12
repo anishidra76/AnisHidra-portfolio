@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import Footer from "./components/Footer.jsx";
 import Login from "./layouts/Login.jsx";
 import Dashboard from "./layouts/Dashboard.jsx";
+import API_URL from "./api.js";
 
  
 /* ============================================================================
@@ -23,10 +24,55 @@ import Dashboard from "./layouts/Dashboard.jsx";
 const prefersReducedMotion =
   typeof window !== "undefined" &&
   window.matchMedia("(prefers-reduced-motion: reduce)").matches;
- 
+
+
+
+
+
+
+// src/hooks/useTrackVisitor.js
+
+export const useTrackVisitor = () => {
+  useEffect(() => {
+    const track = async () => {
+      // تجنب تسجيل نفس الزائر عدة مرات في نفس الجلسة (Session)
+      if (sessionStorage.getItem('visited')) return;
+
+      try {
+        await fetch(`${API_URL}/api/visitors/`, { // ضع رابط الـ API الخاص بك
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({}), // لا يحتاج إرسال شيء، Django سيلتقط الـ IP والـ Agent
+        });
+        sessionStorage.setItem('visited', 'true');
+      } catch (err) {
+        // التجاهل الصامت عند حدوث خطأ
+      }
+    };
+
+    track();
+  }, []);
+};
+
+
+
+
+
+
+
+
+
+
+
+
 function App() {
 
+  useTrackVisitor();
 
+
+  
   const isDashboard = window.location.pathname === "/dashboard";
   const isLogin = window.location.pathname === "/login";
   const token = localStorage.getItem("token");

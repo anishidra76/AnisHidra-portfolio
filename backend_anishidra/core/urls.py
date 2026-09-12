@@ -19,12 +19,8 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework.authtoken.views import obtain_auth_token
-from django.http import JsonResponse
 
 
-
-def home_page(request):
-    return JsonResponse({"message": "server is running"})
 
 
 urlpatterns = [
@@ -32,7 +28,7 @@ urlpatterns = [
 
     path('api/login/', obtain_auth_token),
     
-    path('api/home/', include('applications.home.urls'), home_page),
+    path('api/home/', include('applications.home.urls')),
     path('api/about/', include('applications.about.urls')),
     path('api/skills/', include('applications.skills.urls')),
     path('api/qualifications/', include('applications.qualifications.urls')),

@@ -14,6 +14,7 @@ from pathlib import Path
 from corsheaders.defaults import default_methods
 import os
 from dotenv import load_dotenv
+import dj_database_url
 
 
 
@@ -107,14 +108,10 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/6.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'portfolioah_db',
-        'USER': 'anishidra76',
-        'PASSWORD': 'AH76msbaa0',
-        'HOST': 'localhost',
-        'PORT': '5433',
-    }
+    'default': dj_database_url.config(
+        default=os.getenv("DATABASE_URL")
+    )
+
 }
 
 

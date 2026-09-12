@@ -15,6 +15,7 @@ from corsheaders.defaults import default_methods
 import os
 from dotenv import load_dotenv
 import dj_database_url
+import cloudinary
 
 
 
@@ -154,6 +155,13 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
+
+
+cloudinary.config(
+    cloud_name=os.getenv("CLOUDINARY_CLOUD_NAME"),
+    api_key=os.getenv("CLOUDINARY_API_KEY"),
+    api_secret=os.getenv("CLOUDINARY_API_SECRET")
+)
 
 
 # Email

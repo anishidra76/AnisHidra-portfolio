@@ -133,7 +133,7 @@
 .profile-stat strong {
   display: block;
   color: var(--primary-sky);
-  font-size: 1.15rem;
+  font-size: 0.90rem;
   margin-bottom: 5px;
 }
 
@@ -256,7 +256,7 @@
   }
 
   .profile-stat strong {
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
 
   .profile-stat span {
@@ -346,7 +346,7 @@
   }
 
   .profile-stat strong {
-    font-size: 0.95rem;
+    font-size: 0.78rem;
   }
 
   .profile-stat span {
@@ -424,7 +424,7 @@
   }
 
   .profile-stat strong {
-    font-size: 0.65rem;
+    font-size: 0.70rem;
   }
 
   .profile-stat span {

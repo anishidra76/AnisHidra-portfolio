@@ -26,7 +26,7 @@ export default function Footer() {
                         <a href="https://instagram.com/anishidra76" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
                         <a href="https://facebook.com/anishidra76p" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i className="fa-brands fa-facebook"></i></a>
                         <a href="https://snapchat.com/add/anishidra76" target="_blank" rel="noopener noreferrer" aria-label="Snapchat"><i className="fa-brands fa-snapchat"></i></a>
-                        <a href="https://tiktok.com/anishidra76" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i className="fa-brands fa-tiktok"></i></a>
+                        <a href="https://tiktok.com/@anishidra76" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i className="fa-brands fa-tiktok"></i></a>
                     </div>
 
                 </div>

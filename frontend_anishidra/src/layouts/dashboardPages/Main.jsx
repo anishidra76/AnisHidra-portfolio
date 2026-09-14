@@ -1873,8 +1873,12 @@ const saveProjects = async () => {
         <div className={styles.aboutEditor}>
           <div className={styles.imageEditor}>
             <div className={styles.imagePreview}>
-              {about ? (
-                <img src={about[0]?.image}
+              {about[0]?.image ? (
+                <img src={
+                  about[0].image instanceof File
+                    ? URL.createObjectURL(about[0].image)
+                    : about[0].image
+                }
                 alt="About Picture" />
               ) : (
                 <i className="fa-solid fa-image"></i>
@@ -1887,12 +1891,16 @@ const saveProjects = async () => {
               <input
                 type="file"
                 accept="image/*"
-                onChange={(e) => setAbout([
-                  {
-                    ...about[0],
-                    image: e.target.files[0]
+                onChange={(e) => {
+                  if (e.target.files[0]) {
+                    setAbout([
+                      {
+                        ...about[0],
+                        image: e.target.files[0]
+                      }
+                    ])
                   }
-                ])}
+                }}
               />
             </label>
           </div>

@@ -2328,7 +2328,14 @@ const saveProjects = async () => {
                 <div className={styles.formGrid}>
                   <div className={styles.certificateImage}>
                     {certificate.image ? (
-                      <img src={certificate.image} alt="Certificate" />
+                      <img
+                        src={
+                          certificate.image instanceof File
+                          ? URL.createObjectURL(certificate.image)
+                          : certificate.image
+                        }
+                        alt="Certificate" 
+                      />
                     ) : (
                       <i className="fa-solid fa-image"></i>
                     )}

@@ -1,8 +1,9 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 
 class AboutContent(models.Model):
-    image = models.ImageField(upload_to="", blank=True, null=True)
+    image = CloudinaryField("image", blank=True, null=True)
     description = models.TextField()
     def __str__(self):
         return self.description

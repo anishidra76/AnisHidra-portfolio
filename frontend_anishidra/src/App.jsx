@@ -128,7 +128,7 @@ function App() {
  
     const heroGlow = {
       baseYRatio: 0.58, ampA: 68, ampB: 32, freqA: 0.0018, freqB: 0.0009,
-      speed: 10.16, phase: 0.6, lineWidth: 10, opacity: 0.22, glow: 30, depth: 1,
+      speed: 0.16, phase: 0.6, lineWidth: 10, opacity: 0.22, glow: 30, depth: 1,
       colorStops: ["#22d3ee", "#38bdf8", "#d946ef"],
     };
     const heroCore = {

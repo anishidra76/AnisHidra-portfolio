@@ -100,7 +100,7 @@ function App() {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("3d");
+    const ctx = canvas.getContext("2d");
  
     const HORIZON_RATIO = 0.7;
     let stars = [];

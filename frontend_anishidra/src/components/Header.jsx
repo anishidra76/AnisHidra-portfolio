@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import '../styles/header.css';
+import { Label } from "recharts";
 
 
 
@@ -71,7 +72,9 @@ export default function Header() {
                                   href={`#${item.id}`}
                                   className={activeSection === item.id ? 'active' : undefined}
                                   aria-current={activeSection === item.id ? 'page' : undefined}
-                                  onClick={() => setMenuOpen(false)}
+                                  onClick={() => {
+                                    setMenuOpen(false)
+                                  }}
                                 >
                                     <i className={`fa-solid ${item.icon}`}></i> <span>{item.label}</span>
                                 </a>

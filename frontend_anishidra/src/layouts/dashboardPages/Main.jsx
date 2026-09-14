@@ -2327,7 +2327,15 @@ const saveProjects = async () => {
                 <div className={styles.formGrid}>
                   <div className={styles.certificateImage}>
                     {certificate.image ? (
-                      <img src={certificate.image} alt="Certificate" />
+                      <img src={
+                              certificate.image instanceof File
+                                ? URL.createObjectURL(certificate.image)
+                                : certificate.image.startsWith('http')
+                                ? certificate.image
+                                : `https://res.cloudinary.com/m6jjifei/${certificate.image}`
+                              }
+                      alt="Certificate"
+                      />
                     ) : (
                       <i className="fa-solid fa-image"></i>
                     )}
@@ -2570,7 +2578,14 @@ const saveProjects = async () => {
               <div className={styles.projectEditor}>
                 <div className={styles.projectImage}>
                   {project.image ? (
-                    <img src={project.image} alt={project.name} />
+                    <img src={
+                              project.image instanceof File
+                                ? URL.createObjectURL(project.image)
+                                : project.image.startsWith('http')
+                                ? project.image
+                                : `https://res.cloudinary.com/m6jjifei/${project.image}`
+                              }
+                    />
                   ) : (
                     <i className="fa-solid fa-image"></i>
                   )}

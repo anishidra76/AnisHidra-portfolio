@@ -188,7 +188,7 @@
 
   .sidebar {
     height: var(--nav-height-mobile);
-    padding: 0 18px;
+    padding: 0 12px;
     gap: 10px;
   }
 

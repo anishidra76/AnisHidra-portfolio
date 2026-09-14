@@ -30,9 +30,17 @@ function Projects() {
           <div className="glow-card project-card" key={project.id}>
             <div className="project-thumb">
               <span className="project-tag">{project.tag} </span>
-              <img src={project.image}
-              alt={project.name}
-              className="project-image"/>
+              <img 
+                src={
+                  !project?.image
+                  ? ""
+                  : project.image.startsWith("http")
+                  ? project.image
+                  : `https://res.cloudinary.com/m6jjifei/${project.image}`
+                }
+                alt={project.name}
+                className="project-image"
+              />
             </div>
  
             <div className="project-body">

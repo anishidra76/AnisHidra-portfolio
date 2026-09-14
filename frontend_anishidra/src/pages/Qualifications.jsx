@@ -73,7 +73,7 @@ function Qualifications({ openModal }) {
                                     />
                                     <h4>{certificate.name}</h4>
                                     <div className="cert-actions">
-                                      <button type="button" className="btn-gradient btn-sm" onClick={(e) => openModal(certificate.image, e)}>View</button>
+                                      <button type="button" className="btn-gradient btn-sm" onClick={(e) => openModal(certificate.image.startsWith("http") ? certificate.image : `https://res.cloudinary.com/m6jjifei/${certificate.image}`)}>View</button>
                                       <a href={certificate.link} className="btn-gradient btn-sm" target="_blank" rel="noopener noreferrer">Verify Link</a>
                                     </div>
                                 </div>

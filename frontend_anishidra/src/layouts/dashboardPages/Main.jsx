@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useSyncExternalStore } from "react";
 import styles from "../dashboardStyles/main.module.css";
-import { API_URL, CLOUDINARY_URL } from '/src/api.js';
+import API_URL from '/src/api.js';
+
+const CLOUDINARY_URL = "https://res.cloudinary.com/m6jjifei/";
 
 
 

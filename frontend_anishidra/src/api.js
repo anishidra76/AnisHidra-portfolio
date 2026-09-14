@@ -1,2 +1,4 @@
-export const API_URL = "https://backend-anishidra.onrender.com";
-export const CLOUDINARY_URL = "https://res.cloudinary.com/m6jjifei/";
+const API_URL = "https://backend-anishidra.onrender.com";
+
+
+export default API_URL; CLOUDINARY_URL;

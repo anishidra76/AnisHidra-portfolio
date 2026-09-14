@@ -8,6 +8,7 @@ import API_URL from '/src/api.js';
 
 
 
+
 const Main = () => {
 
   /* =========================
@@ -129,7 +130,6 @@ const Main = () => {
   if(!about) {
     return <p>Loading...</p>
   }
-
 
 
 // ================= SKILLS =================
@@ -1275,37 +1275,48 @@ const saveSkills = async () => {
         formData.append("name", certificate.name);
         formData.append("link", certificate.link);
 
-        if (certificate.imageFile instanceof File) {
+        if (certificate.imageFile) {
           formData.append("image", certificate.imageFile);
         }
 
-        const url = certificate.isNew
-          ? `${API_URL}/api/qualifications/certificatecards/`
-          : `${API_URL}/api/qualifications/certificatecards/${certificate.id}`
-        
-        const method = certificate.isNew ? "POST" : "PATCH";
+        let response;
 
-        const response = await fetch(url, {
-          method: method,
-          body: formData,
-        });
+        if (certificate.isNew) {
+          response = await fetch(`${API_URL}/api/qualifications/certificatecards/`, {
+            method: "POST",
+            body: formData,
+          });
+        } else {
+          response = await fetch(
+            `${API_URL}/api/qualifications/certificatecards/${certificate.id}/`,
+            {
+              method: "PATCH",
+              body: formData,
+            }
+          );
+        }
 
-        if(!response.ok) throw new Error("Failed to save certificate item");
-        const saveCertificate = await response.json();
-        savedCertificates.push(saveCertificate)
+        if (!response.ok) {
+          throw new Error("Failed to save certificate");
+        }
 
+        const savedCertificate = await response.json();
 
-        setEducation(savedEducation);
-        setCertificates(savedCertificates);
-        alert("Qualifications information saved successfully!");
+        savedCertificates.push(savedCertificate);
       }
+
+
+      setEducation(savedEducation);
+      setCertificates(savedCertificates);
+      alert("Qualifications information saved successfully!");
+
     } catch (error) {
       console.error(
         "Error saving qualifications:",
         error
       );
     }
-  }
+  };
 
 
 
@@ -2316,19 +2327,8 @@ const saveProjects = async () => {
 
                 <div className={styles.formGrid}>
                   <div className={styles.certificateImage}>
-                    {certificate.imageFile || certificate.image ? (
-                      <img 
-                        src={
-                          certificate.imageFile
-                            ? URL.createObjectURL(certificate.imageFile)
-                            : !certificate.image
-                            ? ""
-                            : certificate.image.startsWith("http")
-                            ? certificate.image
-                            : `https://res.cloudinary.com/m6jjifei/${certificate.image}`
-                        }
-                      alt="Certificate"
-                      />
+                    {certificate.image ? (
+                      <img src={certificate.image} alt="Certificate" />
                     ) : (
                       <i className="fa-solid fa-image"></i>
                     )}
@@ -2340,8 +2340,14 @@ const saveProjects = async () => {
                         accept="image/*"
                         onChange={(e) => {
                           const file = e.target.files[0];
+
                           if (!file) return;
 
+                          updateCertificate(
+                            certificate.id,
+                            "image",
+                            URL.createObjectURL(file)
+                          );
                           updateCertificate(
                             certificate.id,
                             "imageFile",
@@ -2565,14 +2571,7 @@ const saveProjects = async () => {
               <div className={styles.projectEditor}>
                 <div className={styles.projectImage}>
                   {project.image ? (
-                    <img src={
-                              project.image instanceof File
-                                ? URL.createObjectURL(project.image)
-                                : project.image.startsWith('http')
-                                ? project.image
-                                : `https://res.cloudinary.com/m6jjifei/${project.image}`
-                              }
-                    />
+                    <img src={project.image} alt={project.name} />
                   ) : (
                     <i className="fa-solid fa-image"></i>
                   )}

@@ -60,16 +60,7 @@ function Qualifications({ openModal }) {
                         <div className="cert-grid" >
                             {certificate.map((certificate) => (
                                 <div className="glow-card cert-card shimmer-box" key={certificate.id}>
-                                    <img src={
-                                            !certificate.image
-                                                ? ""
-                                                : certificate.image.startsWith("http")
-                                                ? certificate.image
-                                                : `https://res.cloudinary.com/m6jjifei/${certificate.image}`
-                                            }
-                                    alt={certificate.name}
-                                    loading="lazy"
-                                    />
+                                    <img src={certificate.image} alt={certificate.name} loading="lazy" />
                                     <h4>{certificate.name}</h4>
                                     <div className="cert-actions">
                                       <button type="button" className="btn-gradient btn-sm" onClick={(e) => openModal(certificate.image, e)}>View</button>

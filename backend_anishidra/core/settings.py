@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'rest_framework.authtoken',
+    'cloudinary_storage',
+    'cloudinary',
     'applications.home.apps.HomeConfig',
     'applications.about.apps.AboutConfig',
     'applications.services.apps.ServicesConfig',
@@ -61,6 +63,7 @@ INSTALLED_APPS = [
     'applications.contact.apps.ContactConfig',
     'applications.management.apps.ManagementConfig',
     'applications.visitors.apps.VisitorsConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -153,15 +156,16 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
 
-cloudinary.config(
-    cloud_name=os.getenv("CLOUDINARY_CLOUD_NAME"),
-    api_key=os.getenv("CLOUDINARY_API_KEY"),
-    api_secret=os.getenv("CLOUDINARY_API_SECRET")
-)
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME' : 'm6jjifei',
+    'API_KEY' : '391366976634791',
+    'API_SECRET' : 'ws5TyR9hMBFDNTDzQcuDpX7r5ns',
+}
 
 
 # Email

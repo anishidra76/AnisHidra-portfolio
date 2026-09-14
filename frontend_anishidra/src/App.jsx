@@ -100,7 +100,7 @@ function App() {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("3d");
  
     const HORIZON_RATIO = 0.7;
     let stars = [];
@@ -128,7 +128,7 @@ function App() {
  
     const heroGlow = {
       baseYRatio: 0.58, ampA: 68, ampB: 32, freqA: 0.0018, freqB: 0.0009,
-      speed: 0.16, phase: 0.6, lineWidth: 10, opacity: 0.22, glow: 30, depth: 1,
+      speed: 10.16, phase: 0.6, lineWidth: 10, opacity: 0.22, glow: 30, depth: 1,
       colorStops: ["#22d3ee", "#38bdf8", "#d946ef"],
     };
     const heroCore = {

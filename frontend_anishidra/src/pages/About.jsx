@@ -2,8 +2,6 @@ import '../styles/main/about.css'
 import { useEffect, useState } from 'react';
 import API_URL from '../api';
 
-const CLOUDINARY_URL = "https://res.cloudinary.com/m6jjifei/";
-
 
 
 
@@ -34,7 +32,7 @@ function About() {
                                     ? URL.createObjectURL(about[0].image)
                                     : about[0].image.startsWith('http')
                                     ? about[0].image
-                                    : `${CLOUDINARY_URL}${about[0].image}`
+                                    : `https://res.cloudinary.com/m6jjifei/${about[0].image}`
                                 }
                         alt="Portrait of Anis Hidra"
                         className="about-photo" loading="lazy"

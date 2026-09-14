@@ -3,15 +3,11 @@ import styles from "../dashboardStyles/main.module.css";
 import API_URL from '/src/api.js'; 
 
 
-
+const CLOUDINARY_URL = "https://res.cloudinary.com/m6jjifei/";
 
 
 
 const Main = () => {
-  
-
-    const CLOUDINARY_URL = "https://res.cloudinary.com/m6jjifei/";
-
 
   /* =========================
      HOME

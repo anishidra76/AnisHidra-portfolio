@@ -1877,7 +1877,9 @@ const saveProjects = async () => {
                 <img src={
                   about[0].image instanceof File
                     ? URL.createObjectURL(about[0].image)
-                    : about[0].image
+                    : about[0].image.startsWith('http')
+                    ? about[0].image
+                    : `${CLOUDINARY_URL}${about[0].image}`
                 }
                 alt="About Picture" />
               ) : (

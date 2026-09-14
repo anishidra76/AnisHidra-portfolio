@@ -1285,7 +1285,7 @@ const saveSkills = async () => {
         
         const method = certificate.isNew ? "POST" : "PATCH";
 
-        const res = await fetch(url, {
+        const response = await fetch(url, {
           method: method,
           body: formData,
         });

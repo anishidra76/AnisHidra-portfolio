@@ -1291,7 +1291,7 @@ const saveSkills = async () => {
         });
 
         if(!response.ok) throw new Error("Failed to save certificate item");
-        const saveCertificate = await response.json;
+        const saveCertificate = await response.json();
         savedCertificates.push(saveCertificate)
 
 

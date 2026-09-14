@@ -1290,7 +1290,7 @@ const saveSkills = async () => {
           body: formData,
         });
 
-        if(!res.ok) throw new Error("Failed to save certificate item");
+        if(!response.ok) throw new Error("Failed to save certificate item");
         const saveCertificate = await response.json;
         savedCertificates.push(saveCertificate)
 

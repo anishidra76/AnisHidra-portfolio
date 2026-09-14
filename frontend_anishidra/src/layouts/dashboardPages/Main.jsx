@@ -2580,7 +2580,16 @@ const saveProjects = async () => {
               <div className={styles.projectEditor}>
                 <div className={styles.projectImage}>
                   {project.image ? (
-                    <img src={project.image} alt={project.name} />
+                    <img 
+                      src={
+                        project.image instanceof File
+                          ? URL.createObjectURL(project.image)
+                          : project.image.startsWith('http')
+                          ? project.image
+                          : `https://res.cloudinary.com/m6jjifei/${project.image}`
+                      }
+                      alt={project.name}
+                    />
                   ) : (
                     <i className="fa-solid fa-image"></i>
                   )}

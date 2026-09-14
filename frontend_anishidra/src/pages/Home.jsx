@@ -1,6 +1,7 @@
 import '../styles/main/home.css'
 import { useState, useEffect } from 'react';
 import API_URL from '../api';
+import { TypeAnimation } from 'react-type-animation';
 
 
 
@@ -28,7 +29,12 @@ function Home() {
 
                 <div className="hero-content">
                     <h1 className="gradient-text">Anis Hidra</h1>
-                    <p className="hero-eyebrow">¤ Full-Stack Web Developer</p>
+                    <p className="hero-eyebrow">
+                        <TypeAnimation sequence={['Full Stuck Web Developer', 2000, '']}
+                        speed={50}
+                        repeat={Infinity}
+                        />
+                    </p>
                     <div className="sidebar-socials">
                         <a href="https://github.com/anishidra76" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i className="fa-brands fa-github"></i></a>
                         <a href="https://linkedin.com/in/anishidra76" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i className="fa-brands fa-linkedin"></i></a>

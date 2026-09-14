@@ -165,6 +165,7 @@ CLOUDINARY_STORAGE = {
     'CLOUD_NAME' : 'm6jjifei',
     'API_KEY' : '391366976634791',
     'API_SECRET' : 'ws5TyR9hMBFDNTDzQcuDpX7r5ns',
+    'STATIC_TAG' : 'static',
 }
 
 

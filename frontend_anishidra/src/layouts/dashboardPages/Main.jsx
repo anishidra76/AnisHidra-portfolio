@@ -131,6 +131,7 @@ const Main = () => {
   }
 
 
+
 // ================= SKILLS =================
 
 const [skillFields, setSkillFields] = useState([]);
@@ -1274,48 +1275,37 @@ const saveSkills = async () => {
         formData.append("name", certificate.name);
         formData.append("link", certificate.link);
 
-        if (certificate.imageFile) {
+        if (certificate.imageFile instanceof File) {
           formData.append("image", certificate.imageFile);
         }
 
-        let response;
+        const url = certificate.isNew
+          ? `${API_URL}/api/qualifications/certificatecards/`
+          : `${API_URL}/api/qualifications/certificatecards/${certificate.id}`
+        
+        const method = certificate.isNew ? "POST" : "PATCH";
 
-        if (certificate.isNew) {
-          response = await fetch(`${API_URL}/api/qualifications/certificatecards/`, {
-            method: "POST",
-            body: formData,
-          });
-        } else {
-          response = await fetch(
-            `${API_URL}/api/qualifications/certificatecards/${certificate.id}/`,
-            {
-              method: "PATCH",
-              body: formData,
-            }
-          );
-        }
+        const res = await fetch(url, {
+          method: method,
+          body: formData,
+        });
 
-        if (!response.ok) {
-          throw new Error("Failed to save certificate");
-        }
+        if(!res.ok) throw new Error("Failed to save certificate item");
+        const saveCertificate = await response.json;
+        savedCertificates.push(saveCertificate)
 
-        const savedCertificate = await response.json();
 
-        savedCertificates.push(savedCertificate);
+        setEducation(savedEducation);
+        setCertificates(savedCertificates);
+        alert("Qualifications information saved successfully!");
       }
-
-
-      setEducation(savedEducation);
-      setCertificates(savedCertificates);
-      alert("Qualifications information saved successfully!");
-
     } catch (error) {
       console.error(
         "Error saving qualifications:",
         error
       );
     }
-  };
+  }
 
 
 
@@ -2326,16 +2316,15 @@ const saveProjects = async () => {
 
                 <div className={styles.formGrid}>
                   <div className={styles.certificateImage}>
-                    {certificate.image ? (
-                      <img src={
-                                !certificate.image
-                                  ? ""
-                                  : certificate.image instanceof File
-                                  ? URL.createObjectURL(certificate.image)
-                                  : certificate.image.startsWith("blob:") || certificate.image.startsWith("http")
-                                  ? certificate.image
-                                  : `https://res.cloudinary.com/m6jjifei/${certificate.image}`
-                              }
+                    {certificate.imageFile || certificate.image ? (
+                      <img 
+                        src={
+                          certificate.imageFile
+                            ? URL.createObjectURL(certificate.imageFile)
+                            : certificate.image.startsWith("http")
+                            ? certificate.image
+                            : `https://res.cloudinary.com/m6jjifei/${certificate.image}`
+                        }
                       alt="Certificate"
                       />
                     ) : (
@@ -2349,14 +2338,8 @@ const saveProjects = async () => {
                         accept="image/*"
                         onChange={(e) => {
                           const file = e.target.files[0];
-
                           if (!file) return;
 
-                          updateCertificate(
-                            certificate.id,
-                            "image",
-                            URL.createObjectURL(file)
-                          );
                           updateCertificate(
                             certificate.id,
                             "imageFile",

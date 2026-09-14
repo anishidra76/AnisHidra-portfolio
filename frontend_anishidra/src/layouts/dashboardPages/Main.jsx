@@ -2332,7 +2332,9 @@ const saveProjects = async () => {
                         src={
                           certificate.image instanceof File
                           ? URL.createObjectURL(certificate.image)
-                          : certificate.image
+                          : certificate.image.startsWith('http')
+                          ? certificate.image
+                          : `https://res.cloudinary.com/m6jjifei/${certificate.image}`
                         }
                         alt="Certificate" 
                       />

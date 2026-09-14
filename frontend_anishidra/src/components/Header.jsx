@@ -82,9 +82,9 @@ export default function Header() {
                   
                 <div className="tech-dots">
                     <i className="fa-brands fa-python" title="Python"></i>
-                    <i className="fa-brands fa-react" title="React"></i>
-                    <i className="fa-solid fa-brain" title="AI Engineering"></i>
-                    <i className="fa-brands fa-node-js" title="Node.js"></i>
+                    <i className="fa-brands fa-square-js" title="JavaScript"></i>
+                    <i className="fa-brands fa-java" title="Java"></i>
+                    <i className="fa-brands fa-linux" title="Linux"></i>
                 </div>
 
             </header>

@@ -162,11 +162,13 @@ MEDIA_ROOT = BASE_DIR / "media"
 
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME' : 'm6jjifei',
-    'API_KEY' : '391366976634791',
-    'API_SECRET' : 'ws5TyR9hMBFDNTDzQcuDpX7r5ns',
+    'CLOUD_NAME' : os.getenv('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY' : os.getenv('CLOUDINARY_API_KEY'),
+    'API_SECRET' : os.getenv('CLOUDINARY_API_SECRET'),
     'STATIC_TAG' : 'static',
 }
+
+
 
 
 # Email

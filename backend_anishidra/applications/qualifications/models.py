@@ -1,4 +1,6 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
+
 
 
 class EducationCard(models.Model):
@@ -13,6 +15,6 @@ class EducationCard(models.Model):
 class CertificateCard(models.Model):
     name = models.CharField(max_length=50)
     link = models.URLField(blank=True)
-    image = models.ImageField(upload_to="", blank=True, null=True)
+    image = CloudinaryField("image", blank=True, null=True)
     def __str__(self):
         return self.name

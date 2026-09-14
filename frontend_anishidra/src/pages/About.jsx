@@ -24,7 +24,16 @@ function About() {
             <section id="about">
                 <h2 className="section-title gradient-text">About Me</h2>
                     <div className="glow-card about-container">
-                        <img src={about[0]?.image} alt="Portrait of Anis Hidra" className="about-photo" loading="lazy" />
+                        <img src={
+                                  about[0].image instanceof File
+                                    ? URL.createObjectURL(about[0].image)
+                                    : about[0].image.startsWith('http')
+                                    ? about[0].image
+                                    : `${CLOUDINARY_URL}${about[0].image}`
+                                }
+                        alt="Portrait of Anis Hidra"
+                        className="about-photo" loading="lazy"
+                        />
                         <p className="about-text">{about[0]?.description}</p>
                     </div>
                     

@@ -1,9 +1,6 @@
 import '../styles/main/about.css'
 import { useEffect, useState } from 'react';
-import API_URL from '../api';
-import CLOUDINARY_URL from '/src/api.js';
-
-CLOUDINARY_URL;
+import { API_URL, CLOUDINARY_URL} from '../api';
 
 function About() {
 

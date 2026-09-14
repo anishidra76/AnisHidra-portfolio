@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useSyncExternalStore } from "react";
 import styles from "../dashboardStyles/main.module.css";
-import API_URL from '/src/api.js'; 
-import CLOUDINARY_URL from '/src/api.js';
+import { API_URL, CLOUDINARY_URL } from '/src/api.js';
 
 
-CLOUDINARY_URL;
+
+
 
 
 const Main = () => {

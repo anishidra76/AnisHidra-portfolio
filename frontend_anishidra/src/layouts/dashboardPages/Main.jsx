@@ -2328,11 +2328,13 @@ const saveProjects = async () => {
                   <div className={styles.certificateImage}>
                     {certificate.image ? (
                       <img src={
-                              certificate.image instanceof File
-                                ? URL.createObjectURL(certificate.image)
-                                : certificate.image.startsWith('http')
-                                ? certificate.image
-                                : `https://res.cloudinary.com/m6jjifei/${certificate.image}`
+                                !certificate.image
+                                  ? ""
+                                  : certificate.image instanceof File
+                                  ? URL.createObjectURL(certificate.image)
+                                  : certificate.image.startsWith("blob:") || certificate.image.startsWith("http")
+                                  ? certificate.image
+                                  : `https://res.cloudinary.com/m6jjifei/${certificate.image}`
                               }
                       alt="Certificate"
                       />

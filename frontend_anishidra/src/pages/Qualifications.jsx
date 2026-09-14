@@ -61,7 +61,7 @@ function Qualifications({ openModal }) {
                             {certificate.map((certificate) => (
                                 <div className="glow-card cert-card shimmer-box" key={certificate.id}>
                                     <img src={
-                                            !certificate?.image
+                                            !certificate.image
                                                 ? ""
                                                 : certificate.image.startsWith("http")
                                                 ? certificate.image

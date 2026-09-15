@@ -15,7 +15,6 @@ from corsheaders.defaults import default_methods
 import os
 from dotenv import load_dotenv
 import dj_database_url
-import cloudinary
 
 
 

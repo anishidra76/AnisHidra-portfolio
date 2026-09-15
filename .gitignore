@@ -1,115 +1,73 @@
+# ==========================================
 # Environment & Secrets
-
+# ==========================================
 .env
 .env.*
 !.env.example
 
+# Subfolders Environments
+backend_anishidra/.env
+backend_anishidra/.env.*
+frontend_anishidra/.env
+frontend_anishidra/.env.*
 
 
+# ==========================================
+# Django Back-End (backend_anishidra)
+# ==========================================
+# Caches & Compiled Python
+backend_anishidra/__pycache__/
+backend_anishidra/*/__pycache__/
+backend_anishidra/*.py[cod]
+backend_anishidra/*$py.class
+backend_anishidra/.pytest_cache/
+backend_anishidra/.mypy_cache/
+
+# Virtual Environments
+backend_anishidra/.venv/
+backend_anishidra/venv/
+backend_anishidra/env/
+
+# Static & Media Uploads
+backend_anishidra/media/
+backend_anishidra/staticfiles/
+
+# Logs
+backend_anishidra/logs/
+backend_anishidra/*.log
 
 
-# Python / Django
+# ==========================================
+# React Front-End (frontend_anishidra)
+# ==========================================
+# Dependencies & Builds
+frontend_anishidra/node_modules/
+frontend_anishidra/dist/
+frontend_anishidra/dist-ssr/
+frontend_anishidra/build/
+frontend_anishidra/.vite/
+frontend_anishidra/.eslintcache
+frontend_anishidra/*.local
 
-pycache/
-*.py[cod]
-*$py.class
+# Logs
+frontend_anishidra/npm-debug.log*
+frontend_anishidra/yarn-debug.log*
+frontend_anishidra/yarn-error.log*
+frontend_anishidra/pnpm-debug.log*
 
-*.sqlite3
-db.sqlite3
-db.sqlite3
-db.sqlite3-journal
-
-
-.venv/
-venv/
-env/
-.env
-.env.*
-.venv
-.venv.*
-
-.pytest_cache/
-.mypy_cache/
-
-logs
-*.log
-.log
+# Specific Hidden Files
+frontend_anishidra/src/api.js
+frontend_anishidra/src/layouts/Login.jsx
+frontend_anishidra/src/layouts/Dashboard.jsx
 
 
-
-
-
-# Django
-
-media/
-staticfiles
-
-
-
-
-
-# Node / React
-
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-dist/
-dist-ssr
-build/
-
-*.local
-
-.vite/
-
-
-
-
-
-# IDE / Editor
-
+# ==========================================
+# IDE & System Files
+# ==========================================
 .vscode/
 !.vscode/extensions.json
 .idea/
-
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-*.swap
-*.swwo
-
-
-
-
-
-# Operating System
-
 .DS_Store
 Thumbs.db
-
-
-
-
-
-# Temporary Files
-
 *.tmp
 *.temp
-.cache/
-
-
-
-
-
-# Git
-
-.env
-staticfiles/
-__pycache__/
-*.pyc

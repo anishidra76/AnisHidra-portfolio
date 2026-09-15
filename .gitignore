@@ -57,8 +57,6 @@ frontend_anishidra/pnpm-debug.log*
 
 # Specific Hidden Files
 frontend_anishidra/src/api.js
-frontend_anishidra/src/layouts/Login.jsx
-frontend_anishidra/src/layouts/Dashboard.jsx
 
 
 # ==========================================

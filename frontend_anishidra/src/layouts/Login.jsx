@@ -1,12 +1,8 @@
 import { useState } from "react";
 import styles from "./dashboardStyles/login.module.css";
-import API_URL from '../api';
+import API_URL from "../api";
 
-
-
-
-
-function Login() {
+export default function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
@@ -37,7 +33,6 @@ function Login() {
             localStorage.setItem("token", data.token);
 
             window.location.href = "/dashboard";
-
         } catch (error) {
             console.error(error);
             setError("Unable to connect to the server.");
@@ -47,7 +42,6 @@ function Login() {
     return (
         <div className={styles.loginPage}>
             <div className={styles.loginCard}>
-
                 <div className={styles.logo}>
                     <span>A</span>
                     <span>H</span>
@@ -57,7 +51,6 @@ function Login() {
                 <p>Sign in to access your dashboard</p>
 
                 <form onSubmit={handleSubmit}>
-
                     <div className={styles.inputGroup}>
                         <label>Username</label>
                         <input
@@ -80,20 +73,14 @@ function Login() {
                         />
                     </div>
 
-                    {error && (
-                        <p className={styles.error}>{error}</p>
-                    )}
+                    {error && <p className={styles.error}>{error}</p>}
 
                     <button type="submit">
                         <i className="fa-solid fa-right-to-bracket"></i>
                         Login
                     </button>
-
                 </form>
-
             </div>
         </div>
     );
 }
-
-export default Login;

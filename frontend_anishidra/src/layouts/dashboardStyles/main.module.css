@@ -1,1020 +1,834 @@
-/* =========================================================
-   DESIGN TOKENS (see dashboard.module.css for the source of truth)
-========================================================= */
-
 :global(:root) {
-  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-
-  --bg-void: #05060f;
-  --bg-base: #090b1c;
-
-  --aurora-magenta: #b34fd6;
-  --aurora-violet: #7a4dff;
-  --aurora-teal: #2fd9c4;
-  --aurora-cyan: #38bdf8;
-  --aurora-green: #34d399;
-
-  --text-primary: #f5f6fb;
-  --text-secondary: #9aa0ba;
-  --text-tertiary: #6c7290;
-
-  --glass-01: rgba(255, 255, 255, 0.03);
-  --glass-02: rgba(255, 255, 255, 0.05);
-  --glass-03: rgba(255, 255, 255, 0.08);
-  --glass-border: rgba(255, 255, 255, 0.09);
-  --glass-border-strong: rgba(255, 255, 255, 0.16);
-
-  --accent: #8b6cf2;
-  --accent-strong: #a685ff;
-  --accent-teal: #2fd9c4;
-
-  --success: #3ddc9a;
-  --danger: #ff6b81;
-  --warning: #e7b968;
-
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 22px;
-
-  --shadow-glass: 0 10px 34px rgba(2, 4, 16, 0.45);
-  --shadow-glass-sm: 0 6px 18px rgba(2, 4, 16, 0.35);
-
-  --ease: cubic-bezier(.4, 0, .2, 1);
+    --font-sans:
+        "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    --bg-void: #05060f;
+    --bg-base: #090b1c;
+    --aurora-magenta: #b34fd6;
+    --aurora-violet: #7a4dff;
+    --aurora-teal: #2fd9c4;
+    --aurora-cyan: #38bdf8;
+    --aurora-green: #34d399;
+    --text-primary: #f5f6fb;
+    --text-secondary: #9aa0ba;
+    --text-tertiary: #6c7290;
+    --glass-01: rgba(255, 255, 255, 0.03);
+    --glass-02: rgba(255, 255, 255, 0.05);
+    --glass-03: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.09);
+    --glass-border-strong: rgba(255, 255, 255, 0.16);
+    --accent: #8b6cf2;
+    --accent-strong: #a685ff;
+    --accent-teal: #2fd9c4;
+    --success: #3ddc9a;
+    --danger: #ff6b81;
+    --warning: #e7b968;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 22px;
+    --shadow-glass: 0 10px 34px rgba(2, 4, 16, 0.45);
+    --shadow-glass-sm: 0 6px 18px rgba(2, 4, 16, 0.35);
+    --ease: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
-/* =========================================================
-   PAGE
-========================================================= */
+/* PAGE */
 
 .main {
-  width: 100%;
-  padding: 8px 4px 40px;
-  box-sizing: border-box;
-  font-family: var(--font-sans);
-  color: var(--text-primary);
+    width: 100%;
+    padding: 8px 4px 40px;
+    box-sizing: border-box;
+    font-family: var(--font-sans);
+    color: var(--text-primary);
 }
 
-
-/* =========================================================
-   SECTION SHELL
-========================================================= */
+/* SECTION SHELL */
 
 .section {
-  margin-bottom: 24px;
-  padding: 32px;
-
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-xl);
-
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: var(--shadow-glass-sm);
-
-  color: var(--text-primary);
+    margin-bottom: 24px;
+    padding: 32px;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-xl);
+    background: linear-gradient(
+        160deg,
+        rgba(255, 255, 255, 0.05),
+        rgba(255, 255, 255, 0.02)
+    );
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: var(--shadow-glass-sm);
+    color: var(--text-primary);
 }
-
 .sectionHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 26px;
 }
-
 .sectionHeader h2 {
-  margin: 0;
-  padding-left: 14px;
-  border-left: 3px solid var(--accent);
-
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 0.1px;
+    margin: 0;
+    padding-left: 14px;
+    border-left: 3px solid var(--accent);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.1px;
 }
-
 .sectionActions {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 26px;
-  padding-top: 22px;
-  border-top: 1px solid var(--glass-border);
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 26px;
+    padding-top: 22px;
+    border-top: 1px solid var(--glass-border);
 }
 
-
-/* =========================================================
-   BUTTONS
-========================================================= */
+/* BUTTONS */
 
 .saveButton {
-  position: relative;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-
-  padding: 11px 20px;
-  border: none;
-  border-radius: var(--radius-sm);
-
-  background: linear-gradient(135deg, var(--accent), var(--accent-teal));
-  color: #0a0b1a;
-
-  font-family: inherit;
-  font-size: 13px;
-  font-weight: 700;
-
-  cursor: pointer;
-  pointer-events: auto;
-  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 20px;
+    border: none;
+    border-radius: var(--radius-sm);
+    background: linear-gradient(135deg, var(--accent), var(--accent-teal));
+    color: #0a0b1a;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    pointer-events: auto;
+    transition:
+        transform 0.2s var(--ease),
+        box-shadow 0.2s var(--ease);
 }
-
 .saveButton:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(139, 108, 242, 0.32);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(139, 108, 242, 0.32);
 }
-
 .addButton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  flex-shrink: 0;
-
-  padding: 9px 15px;
-  border: 1px solid var(--glass-border-strong);
-  border-radius: var(--radius-sm);
-
-  background: var(--glass-02);
-  color: var(--text-primary);
-
-  font-family: inherit;
-  font-size: 12px;
-  font-weight: 700;
-  white-space: nowrap;
-
-  cursor: pointer;
-  transition: transform 0.2s var(--ease), background 0.2s var(--ease);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    flex-shrink: 0;
+    padding: 9px 15px;
+    border: 1px solid var(--glass-border-strong);
+    border-radius: var(--radius-sm);
+    background: var(--glass-02);
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+    transition:
+        transform 0.2s var(--ease),
+        background 0.2s var(--ease);
 }
-
 .addButton:hover {
-  transform: translateY(-2px);
-  background: var(--glass-03);
+    transform: translateY(-2px);
+    background: var(--glass-03);
 }
-
 .addNestedButton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-
-  margin-top: 14px;
-  padding: 9px 13px;
-
-  border: 1px dashed var(--glass-border-strong);
-  border-radius: var(--radius-sm);
-
-  background: transparent;
-  color: var(--text-secondary);
-
-  font-family: inherit;
-  font-size: 12px;
-  font-weight: 600;
-
-  cursor: pointer;
-  transition: color 0.2s var(--ease), border-color 0.2s var(--ease), background 0.2s var(--ease);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 14px;
+    padding: 9px 13px;
+    border: 1px dashed var(--glass-border-strong);
+    border-radius: var(--radius-sm);
+    background: transparent;
+    color: var(--text-secondary);
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        color 0.2s var(--ease),
+        border-color 0.2s var(--ease),
+        background 0.2s var(--ease);
 }
-
 .addNestedButton:hover {
-  color: var(--accent-strong);
-  border-color: var(--accent);
-  background: rgba(139, 108, 242, 0.08);
+    color: var(--accent-strong);
+    border-color: var(--accent);
+    background: rgba(139, 108, 242, 0.08);
 }
-
 .specialization > .addNestedButton,
 .skillField > .addNestedButton {
-  margin-top: 18px;
+    margin-top: 18px;
 }
-
 .deleteButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-
-  width: 32px;
-  height: 32px;
-
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-sm);
-
-  background: rgba(255, 107, 129, 0.08);
-  color: #ffb0bb;
-
-  cursor: pointer;
-  transition: background 0.2s var(--ease), transform 0.2s var(--ease);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-sm);
+    background: rgba(255, 107, 129, 0.08);
+    color: #ffb0bb;
+    cursor: pointer;
+    transition:
+        background 0.2s var(--ease),
+        transform 0.2s var(--ease);
 }
-
 .deleteButton:hover {
-  background: rgba(255, 107, 129, 0.18);
-  transform: translateY(-1px);
+    background: rgba(255, 107, 129, 0.18);
+    transform: translateY(-1px);
 }
-
 .skillField + .addButton,
 .cardsList + .addButton {
-  margin-top: 15px;
+    margin-top: 15px;
 }
 
-
-/* =========================================================
-   HOME
-========================================================= */
+/* HOME */
 
 .statsGrid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
 }
-
 .statEditor {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-
-  min-height: 96px;
-  padding: 20px;
-
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-lg);
-  background: var(--glass-02);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-height: 96px;
+    padding: 20px;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    background: var(--glass-02);
 }
-
 .statIcon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-
-  width: 50px;
-  height: 50px;
-
-  border-radius: var(--radius-md);
-  background: linear-gradient(135deg, rgba(139, 108, 242, 0.28), rgba(47, 217, 196, 0.2));
-  color: var(--accent-strong);
-
-  font-size: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius-md);
+    background: linear-gradient(
+        135deg,
+        rgba(139, 108, 242, 0.28),
+        rgba(47, 217, 196, 0.2)
+    );
+    color: var(--accent-strong);
+    font-size: 19px;
 }
-
 .statInfo {
-  flex: 1;
-  min-width: 0;
+    flex: 1;
+    min-width: 0;
 }
-
 .statInfo span {
-  display: block;
-  margin-bottom: 6px;
-  color: var(--text-tertiary);
-  font-size: 12px;
-  font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+    color: var(--text-tertiary);
+    font-size: 12px;
+    font-weight: 600;
 }
-
 .statInfo strong {
-  font-size: 32px;
-  font-weight: 800;
-  font-variant-numeric: tabular-nums;
+    font-size: 32px;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
 }
-
 .counter {
-  display: flex;
-  gap: 7px;
-  flex-shrink: 0;
+    display: flex;
+    gap: 7px;
+    flex-shrink: 0;
 }
-
 .counter button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 32px;
-  height: 32px;
-
-  border: 1px solid var(--glass-border-strong);
-  border-radius: var(--radius-sm);
-
-  background: transparent;
-  color: var(--text-secondary);
-
-  cursor: pointer;
-  transition: transform 0.2s var(--ease), background 0.2s var(--ease), color 0.2s var(--ease);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--glass-border-strong);
+    border-radius: var(--radius-sm);
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition:
+        transform 0.2s var(--ease),
+        background 0.2s var(--ease),
+        color 0.2s var(--ease);
 }
-
 .counter button:hover {
-  transform: translateY(-2px);
-  background: var(--glass-03);
-  color: var(--text-primary);
+    transform: translateY(-2px);
+    background: var(--glass-03);
+    color: var(--text-primary);
 }
 
-
-/* =========================================================
-   ABOUT
-========================================================= */
+/* ABOUT */
 
 .aboutEditor {
-  width: 60%;
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 26px;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 26px;
 }
-
 .imageEditor {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
-
 .imagePreview {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  height: 220px;
-  overflow: hidden;
-
-  border: 1px dashed var(--glass-border-strong);
-  border-radius: var(--radius-lg);
-  background: var(--glass-01);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border: 1px dashed var(--glass-border-strong);
+    border-radius: var(--radius-lg);
+    background: var(--glass-01);
 }
-
 .imagePreview img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-
 .imagePreview i {
-  font-size: 40px;
-  color: var(--text-tertiary);
-  opacity: 0.6;
+    font-size: 40px;
+    color: var(--text-tertiary);
+    opacity: 0.6;
 }
-
 .uploadButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-
-  min-height: 40px;
-  padding: 0 14px;
-
-  border: 1px solid var(--glass-border-strong);
-  border-radius: var(--radius-sm);
-
-  color: var(--text-secondary);
-  font-size: 13px;
-  font-weight: 600;
-
-  cursor: pointer;
-  transition: background 0.2s var(--ease), color 0.2s var(--ease);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 40px;
+    padding: 0 14px;
+    border: 1px solid var(--glass-border-strong);
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 0.2s var(--ease),
+        color 0.2s var(--ease);
 }
-
 .uploadButton:hover {
-  background: var(--glass-02);
-  color: var(--text-primary);
+    background: var(--glass-02);
+    color: var(--text-primary);
 }
-
 .uploadButton input {
-  display: none;
+    display: none;
 }
 
-
-/* =========================================================
-   FORM
-========================================================= */
+/* FORM */
 
 .formGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
 }
-
 .formGroup,
 .formGroupFull {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
-
 .formGroupFull {
-  grid-column: 1 / -1;
+    grid-column: 1 / -1;
 }
-
 .formGroup label,
 .formGroupFull label,
 .formGroupta label {
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--text-secondary);
-  letter-spacing: 0.2px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 0.2px;
 }
-
 .formGroup input,
 .formGroup textarea,
 .formGroupFull input,
 .formGroupFull textarea,
 .formGroupta textarea {
-  width: 100%;
-  box-sizing: border-box;
-
-  padding: 12px 13px;
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-sm);
-
-  outline: none;
-  background: rgba(255, 255, 255, 0.03);
-
-  font-family: inherit;
-  font-size: 13px;
-  color: var(--text-primary);
-
-  transition: border-color 0.2s var(--ease), background 0.2s var(--ease);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 13px;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-sm);
+    outline: none;
+    background: rgba(255, 255, 255, 0.03);
+    font-family: inherit;
+    font-size: 13px;
+    color: var(--text-primary);
+    transition:
+        border-color 0.2s var(--ease),
+        background 0.2s var(--ease);
 }
-
 .formGroupta {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
-
 .formGroupta textarea {
-  height: 200px;
+    height: 200px;
 }
-
 .formGroup textarea,
 .formGroupFull textarea {
-  resize: vertical;
+    resize: vertical;
 }
-
 .formGroup input:focus,
 .formGroup textarea:focus,
 .formGroupFull input:focus,
 .formGroupFull textarea:focus,
 .formGroupta textarea:focus {
-  border-color: var(--accent);
-  background: rgba(139, 108, 242, 0.06);
+    border-color: var(--accent);
+    background: rgba(139, 108, 242, 0.06);
 }
-
 .formGroup input::placeholder,
 .formGroupFull input::placeholder,
 .formGroupta textarea::placeholder {
-  color: var(--text-tertiary);
+    color: var(--text-tertiary);
 }
 
-
-/* =========================================================
-   SKILLS
-========================================================= */
+/* SKILLS */
 
 .skillsStructure {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
-
 .skillField {
-  padding: 22px;
-  border: 1px solid var(--glass-border-strong);
-  border-radius: var(--radius-lg);
-  background: var(--glass-02);
+    padding: 22px;
+    border: 1px solid var(--glass-border-strong);
+    border-radius: var(--radius-lg);
+    background: var(--glass-02);
 }
-
 .fieldTitle,
 .specializationHeader,
 .categoryHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
 }
-
 .fieldTitle {
-  padding-bottom: 18px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 18px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--glass-border);
 }
-
 .titleEditor {
-  flex: 1;
-  min-width: 0;
+    flex: 1;
+    min-width: 0;
 }
-
 .titleEditor span {
-  display: block;
-  margin-bottom: 7px;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1.4px;
-  color: var(--text-tertiary);
+    display: block;
+    margin-bottom: 7px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    color: var(--text-tertiary);
 }
-
 .titleEditor input {
-  width: 100%;
-  box-sizing: border-box;
-
-  padding: 10px 12px;
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-sm);
-
-  outline: none;
-  background: rgba(255, 255, 255, 0.03);
-
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text-primary);
-
-  transition: border-color 0.2s var(--ease);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-sm);
+    outline: none;
+    background: rgba(255, 255, 255, 0.03);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+    transition: border-color 0.2s var(--ease);
 }
-
 .titleEditor input:focus {
-  border-color: var(--accent);
+    border-color: var(--accent);
 }
-
 .categoryHeader .titleEditor input {
-  font-size: 12px;
-  font-weight: 500;
+    font-size: 12px;
+    font-weight: 500;
 }
-
 .specializations {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
 }
-
 .specialization {
-  padding: 20px;
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.03);
 }
-
 .specializationHeader {
-  margin-bottom: 16px;
+    margin-bottom: 16px;
 }
-
 .skillCategories {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
 }
-
 .skillCategory {
-  padding: 16px;
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.025);
+    padding: 16px;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.025);
 }
-
 .categoryHeader {
-  margin-bottom: 14px;
+    margin-bottom: 14px;
 }
-
 .skillList {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
-
 .skillRow {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 72px 32px;
-  align-items: center;
-  gap: 8px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 72px 32px;
+    align-items: center;
+    gap: 8px;
 }
-
 .skillName input,
 .levelControl input {
-  width: 100%;
-  box-sizing: border-box;
-
-  padding: 9px 10px;
-  border: 1px solid var(--glass-border);
-  border-radius: 7px;
-
-  outline: none;
-  background: rgba(255, 255, 255, 0.03);
-
-  font-family: inherit;
-  font-size: 12px;
-  color: var(--text-primary);
-
-  transition: border-color 0.2s var(--ease);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 9px 10px;
+    border: 1px solid var(--glass-border);
+    border-radius: 7px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.03);
+    font-family: inherit;
+    font-size: 12px;
+    color: var(--text-primary);
+    transition: border-color 0.2s var(--ease);
 }
-
 .skillName input:focus,
 .levelControl input:focus {
-  border-color: var(--accent);
+    border-color: var(--accent);
 }
-
 .levelControl {
-  position: relative;
+    position: relative;
 }
-
 .levelControl input {
-  padding-right: 22px;
+    padding-right: 22px;
 }
-
 .levelControl span {
-  position: absolute;
-  top: 50%;
-  right: 8px;
-  transform: translateY(-50%);
-  font-size: 10px;
-  color: var(--text-tertiary);
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    font-size: 10px;
+    color: var(--text-tertiary);
 }
 
-
-/* =========================================================
-   QUALIFICATIONS
-========================================================= */
+/* QUALIFICATIONS */
 
 .subSection {
-  padding: 24px 0;
+    padding: 24px 0;
 }
-
 .subSection + .subSection {
-  border-top: 1px solid var(--glass-border);
+    border-top: 1px solid var(--glass-border);
 }
-
 .subSectionHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-  margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 18px;
 }
-
 .subSectionHeader > div:first-child {
-  display: flex;
-  align-items: center;
-  gap: 14px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
 }
-
 .subSectionHeader > div:first-child > i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  flex-shrink: 0;
-
-  border-radius: var(--radius-md);
-  background: linear-gradient(135deg, rgba(139, 108, 242, 0.28), rgba(47, 217, 196, 0.2));
-  color: var(--accent-strong);
-  font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: var(--radius-md);
+    background: linear-gradient(
+        135deg,
+        rgba(139, 108, 242, 0.28),
+        rgba(47, 217, 196, 0.2)
+    );
+    color: var(--accent-strong);
+    font-size: 18px;
 }
-
 .subSectionHeader h3 {
-  margin: 0 0 3px;
-  font-size: 17px;
-  font-weight: 700;
+    margin: 0 0 3px;
+    font-size: 17px;
+    font-weight: 700;
 }
-
 .subSectionHeader span {
-  color: var(--text-tertiary);
-  font-size: 12px;
+    color: var(--text-tertiary);
+    font-size: 12px;
 }
-
 .cardsList {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
-
 .subSection .addButton {
-  color: var(--text-primary);
+    color: var(--text-primary);
 }
-
 .editorCard {
-  padding: 20px;
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.03);
 }
-
 .cardTop {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
 }
-
 .cardTop > span {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1.4px;
-  color: var(--text-tertiary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    color: var(--text-tertiary);
 }
-
 
 /* Certificate image slot */
 
 .certificateImage {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    grid-row: span 2;
 }
-
 .certificateImage > i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  height: 140px;
-  width: 100%;
-
-  border: 1px dashed var(--glass-border-strong);
-  border-radius: var(--radius-md);
-
-  color: var(--text-tertiary);
-  font-size: 22px;
-  opacity: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
+    width: 100%;
+    border: 1px dashed var(--glass-border-strong);
+    border-radius: var(--radius-md);
+    color: var(--text-tertiary);
+    font-size: 22px;
+    opacity: 0.6;
 }
-
 .certificateImage img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  border-radius: var(--radius-md);
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
 }
-
 .certificateImage .uploadButton {
-  min-height: 38px;
-  font-size: 12px;
+    min-height: 38px;
+    font-size: 12px;
 }
 
-
-/* =========================================================
-   ACHIEVEMENTS
-========================================================= */
+/* ACHIEVEMENTS */
 
 .statsEditor {
-  margin-top: 20px;
-  padding-top: 18px;
-  border-top: 1px solid var(--glass-border);
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid var(--glass-border);
 }
-
 .statsHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
 }
-
 .statsHeader h4 {
-  margin: 0;
-  font-size: 14px;
-  font-weight: 700;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
 }
-
 .statsHeader span {
-  color: var(--text-tertiary);
-  font-size: 12px;
+    color: var(--text-tertiary);
+    font-size: 12px;
 }
-
 .statsInputs {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
 }
-
 .singleStat {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
 }
-
 .singleStat > span {
-  color: var(--text-tertiary);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1px;
+    color: var(--text-tertiary);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
-
 .singleStat input {
-  width: 100%;
-  box-sizing: border-box;
-
-  padding: 10px;
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-sm);
-
-  outline: none;
-  background: rgba(255, 255, 255, 0.03);
-
-  font-family: inherit;
-  font-size: 13px;
-  color: var(--text-primary);
-
-  transition: border-color 0.2s var(--ease);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-sm);
+    outline: none;
+    background: rgba(255, 255, 255, 0.03);
+    font-family: inherit;
+    font-size: 13px;
+    color: var(--text-primary);
+    transition: border-color 0.2s var(--ease);
 }
-
 .singleStat input:focus {
-  border-color: var(--accent);
+    border-color: var(--accent);
 }
 
-
-/* =========================================================
-   PROJECTS
-========================================================= */
+/* PROJECTS */
 
 .projectEditor {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 24px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 24px;
 }
-
 .projectImage {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
-
 .projectImage > i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  height: 180px;
-  width: 100%;
-
-  border: 1px dashed var(--glass-border-strong);
-  border-radius: var(--radius-md);
-
-  color: var(--text-tertiary);
-  font-size: 26px;
-  opacity: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    width: 100%;
+    border: 1px dashed var(--glass-border-strong);
+    border-radius: var(--radius-md);
+    color: var(--text-tertiary);
+    font-size: 26px;
+    opacity: 0.6;
 }
-
 .projectImage img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: var(--radius-md);
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
 }
 
-
-/* =========================================================
-   SERVICES
-========================================================= */
+/* SERVICES */
 
 .serviceGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
 }
-
 .serviceEditor {
-  padding: 20px;
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.03);
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+    padding: 20px;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
-
 .serviceTop {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
 .serviceTop > span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 38px;
-  height: 38px;
-
-  border-radius: var(--radius-sm);
-  background: linear-gradient(135deg, rgba(139, 108, 242, 0.28), rgba(47, 217, 196, 0.2));
-  color: var(--accent-strong);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-sm);
+    background: linear-gradient(
+        135deg,
+        rgba(139, 108, 242, 0.28),
+        rgba(47, 217, 196, 0.2)
+    );
+    color: var(--accent-strong);
 }
 
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
+/* RESPONSIVE */
 
 @media (max-width: 1024px) {
-
-  .main {
-    padding: 4px 2px 32px;
-  }
-
-  .section {
-    padding: 24px;
-  }
-
-  .aboutEditor {
-    grid-template-columns: 190px 1fr;
-  }
-
-  .projectEditor {
-    grid-template-columns: 180px 1fr;
-  }
-
-  .skillCategories {
-    grid-template-columns: 1fr;
-  }
-
-  .serviceGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .statsGrid {
-    grid-template-columns: 1fr;
-  }
+    .main {
+        padding: 4px 2px 32px;
+    }
+    .section {
+        padding: 24px;
+    }
+    .aboutEditor {
+        grid-template-columns: 190px 1fr;
+    }
+    .projectEditor {
+        grid-template-columns: 180px 1fr;
+    }
+    .skillCategories {
+        grid-template-columns: 1fr;
+    }
+    .serviceGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .statsGrid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
-
-  .section {
-    padding: 18px;
-    border-radius: var(--radius-lg);
-  }
-
-  .sectionHeader {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  .sectionHeader h2 {
-    font-size: 18px;
-  }
-
-  .aboutEditor,
-  .projectEditor {
-    grid-template-columns: 1fr;
-  }
-
-  .imagePreview {
-    max-width: 230px;
-  }
-
-  .formGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .formGroupFull {
-    grid-column: auto;
-  }
-
-  .statsInputs {
-    grid-template-columns: 1fr;
-  }
-
-  .certificateImage {
-    grid-row: auto;
-  }
-
-  .subSectionHeader {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .serviceGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .statEditor {
-    padding: 15px;
-  }
-
-  .statIcon {
-    width: 42px;
-    height: 42px;
-  }
-
-  .statInfo strong {
-    font-size: 24px;
-  }
-
-  .skillField {
-    padding: 16px;
-  }
-
-  .skillRow {
-    grid-template-columns: minmax(0, 1fr) 65px 30px;
-  }
-
-  .addButton {
-    width: 100%;
-  }
+    .section {
+        padding: 18px;
+        border-radius: var(--radius-lg);
+    }
+    .sectionHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .sectionHeader h2 {
+        font-size: 18px;
+    }
+    .aboutEditor,
+    .projectEditor {
+        grid-template-columns: 1fr;
+    }
+    .imagePreview {
+        max-width: 230px;
+    }
+    .formGrid {
+        grid-template-columns: 1fr;
+    }
+    .formGroupFull {
+        grid-column: auto;
+    }
+    .statsInputs {
+        grid-template-columns: 1fr;
+    }
+    .certificateImage {
+        grid-row: auto;
+    }
+    .subSectionHeader {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .serviceGrid {
+        grid-template-columns: 1fr;
+    }
+    .statEditor {
+        padding: 15px;
+    }
+    .statIcon {
+        width: 42px;
+        height: 42px;
+    }
+    .statInfo strong {
+        font-size: 24px;
+    }
+    .skillField {
+        padding: 16px;
+    }
+    .skillRow {
+        grid-template-columns: minmax(0, 1fr) 65px 30px;
+    }
+    .addButton {
+        width: 100%;
+    }
 }

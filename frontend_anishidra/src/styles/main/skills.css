@@ -1,262 +1,202 @@
-/* ----- Skills Section ----- */
+/* =====     SKILLS Section     ===== */
+
 .qual-block-skill {
-  margin-bottom: 200px;
-  width: 100%;
+    margin-bottom: 200px;
+    width: 100%;
 }
 .qual-block-skill h3 {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 40px;
-  margin-top: 0px;
-  color: var(--primary-sky);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 0px;
+    color: var(--primary-sky);
 }
- 
-/* Skills Breakdown */
 .skills-columns {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
 }
 .skill-cat-title {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  text-align: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding-bottom: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
 }
 .overall-badge {
-  display: block;
-  text-align: center;
-  font-size: 0.85rem;
-  padding: 4px 8px;
-  border-radius: 4px;
-  margin-bottom: 15px;
-  font-weight: bold;
+    display: block;
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 .skill-group {
-  margin-bottom: 15px;
-  background: rgba(255, 255, 255, 0.02);
-  padding: 10px;
-  border-radius: 8px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 10px;
+    border-radius: 8px;
 }
 .group-title {
-  font-weight: 600;
-  font-size: 0.95rem;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
 }
 .skill-item {
-  margin-top: 8px;
-  padding-left: 10px;
+    margin-top: 8px;
+    padding-left: 10px;
 }
 .item-info {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-bottom: 3px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 3px;
 }
 .progress-bar {
-  width: 100%;
-  height: 6px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
-  overflow: hidden;
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
 }
 .progress-fill {
-  height: 100%;
-  width: 0%;
-  transition: width 0.8s ease, background-color 0.8s ease;
+    height: 100%;
+    width: 0%;
+    transition:
+        width 0.8s ease,
+        background-color 0.8s ease;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   SKILLS — RESPONSIVE
-   ========================================================================== */
-
-
-/* ==========================================================================
-   TABLET — 769px to 1024px
-   ========================================================================== */
+/* =====     TABLET — 769px to 1024px     ===== */
 
 @media (min-width: 769px) and (max-width: 1024px) {
-
-  #skills .section-title {
-    font-size: 3rem;
-    margin-bottom: 60px;
-  }
-
-  .qual-block-skill {
-    margin-bottom: 140px;
-  }
-
-  .qual-block-skill h3 {
-    font-size: 1.7rem;
-    margin-bottom: 30px;
-  }
-
-  .skills-columns {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 25px;
-  }
-
-  .skill-cat {
-    padding: 20px;
-  }
-
-  .skill-cat-title {
-    font-size: 1.05rem;
-  }
-
-  .overall-badge {
-    font-size: 0.78rem;
-  }
-
-  .skill-group {
-    padding: 9px;
-  }
-
-  .group-title {
-    font-size: 0.85rem;
-  }
-
-  .skill-item {
-    padding-left: 7px;
-  }
-
-  .item-info {
-    font-size: 0.78rem;
-  }
+    #skills .section-title {
+        font-size: 3rem;
+        margin-bottom: 60px;
+    }
+    .qual-block-skill {
+        margin-bottom: 140px;
+    }
+    .qual-block-skill h3 {
+        font-size: 1.7rem;
+        margin-bottom: 30px;
+    }
+    .skills-columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+    .skill-cat {
+        padding: 20px;
+    }
+    .skill-cat-title {
+        font-size: 1.05rem;
+    }
+    .overall-badge {
+        font-size: 0.78rem;
+    }
+    .skill-group {
+        padding: 9px;
+    }
+    .group-title {
+        font-size: 0.85rem;
+    }
+    .skill-item {
+        padding-left: 7px;
+    }
+    .item-info {
+        font-size: 0.78rem;
+    }
 }
 
-
-/* ==========================================================================
-   MOBILE — 768px and below
-   ========================================================================== */
+/* =====     MOBILE — 768px and below     ===== */
 
 @media (max-width: 768px) {
-
-  #skills .section-title {
-    font-size: clamp(2.3rem, 9vw, 3rem);
-    margin-bottom: 45px;
-  }
-
-  .qual-block-skill {
-    margin-bottom: 100px;
-  }
-
-  .qual-block-skill h3 {
-    font-size: 1.5rem;
-    margin-bottom: 25px;
-  }
-
-  .skills-columns {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .skill-cat {
-    width: 100%;
-    padding: 18px;
-  }
-
-  .skill-cat-title {
-    font-size: 1rem;
-    margin-bottom: 12px;
-  }
-
-  .overall-badge {
-    font-size: 0.75rem;
-    margin-bottom: 12px;
-  }
-
-  .skill-group {
-    margin-bottom: 12px;
-    padding: 9px;
-  }
-
-  .group-title {
-    font-size: 0.82rem;
-  }
-
-  .skill-item {
-    margin-top: 7px;
-    padding-left: 5px;
-  }
-
-  .item-info {
-    font-size: 0.75rem;
-  }
-
-  .progress-bar {
-    height: 5px;
-  }
+    #skills .section-title {
+        font-size: clamp(2.3rem, 9vw, 3rem);
+        margin-bottom: 45px;
+    }
+    .qual-block-skill {
+        margin-bottom: 100px;
+    }
+    .qual-block-skill h3 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+    .skills-columns {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .skill-cat {
+        width: 100%;
+        padding: 18px;
+    }
+    .skill-cat-title {
+        font-size: 1rem;
+        margin-bottom: 12px;
+    }
+    .overall-badge {
+        font-size: 0.75rem;
+        margin-bottom: 12px;
+    }
+    .skill-group {
+        margin-bottom: 12px;
+        padding: 9px;
+    }
+    .group-title {
+        font-size: 0.82rem;
+    }
+    .skill-item {
+        margin-top: 7px;
+        padding-left: 5px;
+    }
+    .item-info {
+        font-size: 0.75rem;
+    }
+    .progress-bar {
+        height: 5px;
+    }
 }
 
-
-/* ==========================================================================
-   SMALL MOBILE — 480px and below
-   ========================================================================== */
+/* =====     SMALL MOBILE — 480px and below     ===== */
 
 @media (max-width: 480px) {
-
-  #skills .section-title {
-    font-size: 2.2rem;
-    margin-bottom: 35px;
-  }
-
-  .qual-block-skill {
-    margin-bottom: 80px;
-  }
-
-  .qual-block-skill h3 {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-  }
-
-  .skills-columns {
-    gap: 15px;
-  }
-
-  .skill-cat {
-    padding: 15px;
-  }
-
-  .skill-cat-title {
-    font-size: 0.9rem;
-  }
-
-  .overall-badge {
-    font-size: 0.7rem;
-  }
-
-  .skill-group {
-    padding: 8px;
-  }
-
-  .group-title {
-    font-size: 0.75rem;
-  }
-
-  .item-info {
-    font-size: 0.7rem;
-  }
-
-  .progress-bar {
-    height: 4px;
-  }
+    #skills .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 35px;
+    }
+    .qual-block-skill {
+        margin-bottom: 80px;
+    }
+    .qual-block-skill h3 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+    .skills-columns {
+        gap: 15px;
+    }
+    .skill-cat {
+        padding: 15px;
+    }
+    .skill-cat-title {
+        font-size: 0.9rem;
+    }
+    .overall-badge {
+        font-size: 0.7rem;
+    }
+    .skill-group {
+        padding: 8px;
+    }
+    .group-title {
+        font-size: 0.75rem;
+    }
+    .item-info {
+        font-size: 0.7rem;
+    }
+    .progress-bar {
+        height: 4px;
+    }
 }

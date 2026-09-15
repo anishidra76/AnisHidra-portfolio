@@ -1,174 +1,133 @@
-/* ----- Services Section ----- */
+/* =====     CONTACT Section     ===== */
+
 .section-subtitle {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-  width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    width: 100%;
 }
 .service-card h3 {
-  color: var(--primary-sky);
-  margin-bottom: 20px;
+    color: var(--primary-sky);
+    margin-bottom: 20px;
 }
-
 .service-card h5 {
-  margin-bottom: 5px;
+    margin-bottom: 5px;
 }
-
 .service-card p {
-  font-size: 0.85rem;
-  color: var(--text-muted);
+    font-size: 0.85rem;
+    color: var(--text-muted);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   SERVICES — RESPONSIVE
-   ========================================================================== */
-
-
-/* ==========================================================================
-   TABLET — 769px to 1024px
-   ========================================================================== */
+/* =====     TABLET — 769px to 1024px     ===== */
 
 @media (min-width: 769px) and (max-width: 1024px) {
-
-  #services .section-title {
-    font-size: 3rem;
-    margin-bottom: 55px;
-  }
-
-  #services .section-subtitle {
-    width: 90%;
-    font-size: 0.9rem;
-    line-height: 1.6;
-    margin: -25px auto 35px;
-  }
-
-  .services-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-  }
-
-  .service-card {
-    padding: 20px;
-  }
-
-  .service-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-  }
-
-  .service-card h5 {
-    font-size: 0.85rem;
-    margin-bottom: 8px;
-  }
-
-  .service-card p {
-    font-size: 0.75rem;
-    line-height: 1.6;
-  }
+    #services .section-title {
+        font-size: 3rem;
+        margin-bottom: 55px;
+    }
+    #services .section-subtitle {
+        width: 90%;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin: -25px auto 35px;
+    }
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+    .service-card {
+        padding: 20px;
+    }
+    .service-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+    .service-card h5 {
+        font-size: 0.85rem;
+        margin-bottom: 8px;
+    }
+    .service-card p {
+        font-size: 0.75rem;
+        line-height: 1.6;
+    }
 }
 
-
-/* ==========================================================================
-   MOBILE — 768px and below
-   ========================================================================== */
+/* =====     MOBILE — 768px and below     ===== */
 
 @media (max-width: 768px) {
+    #services .section-title {
+        font-size: clamp(2.3rem, 9vw, 3rem);
+        margin-bottom: 40px;
+    }
 
-  #services .section-title {
-    font-size: clamp(2.3rem, 9vw, 3rem);
-    margin-bottom: 40px;
-  }
+    #services .section-subtitle {
+        width: 95%;
+        font-size: 0.78rem;
+        line-height: 1.6;
+        margin: -15px auto 30px;
+    }
 
-  #services .section-subtitle {
-    width: 95%;
-    font-size: 0.78rem;
-    line-height: 1.6;
-    margin: -15px auto 30px;
-  }
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
 
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
+    .service-card {
+        padding: 18px;
+    }
 
-  .service-card {
-    padding: 18px;
-  }
+    .service-card h3 {
+        font-size: 1rem;
+        margin-bottom: 13px;
+    }
 
-  .service-card h3 {
-    font-size: 1rem;
-    margin-bottom: 13px;
-  }
+    .service-card h5 {
+        font-size: 0.78rem;
+        margin-bottom: 7px;
+    }
 
-  .service-card h5 {
-    font-size: 0.78rem;
-    margin-bottom: 7px;
-  }
-
-  .service-card p {
-    font-size: 0.7rem;
-    line-height: 1.6;
-  }
+    .service-card p {
+        font-size: 0.7rem;
+        line-height: 1.6;
+    }
 }
 
-
-/* ==========================================================================
-   SMALL MOBILE — 480px and below
-   ========================================================================== */
+/* =====     SMALL MOBILE — 480px and below     ===== */
 
 @media (max-width: 480px) {
+    #services .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 35px;
+    }
 
-  #services .section-title {
-    font-size: 2.2rem;
-    margin-bottom: 35px;
-  }
+    #services .section-subtitle {
+        width: 100%;
+        font-size: 0.68rem;
+        margin: -10px auto 25px;
+    }
 
-  #services .section-subtitle {
-    width: 100%;
-    font-size: 0.68rem;
-    margin: -10px auto 25px;
-  }
+    .services-grid {
+        gap: 14px;
+    }
 
-  .services-grid {
-    gap: 14px;
-  }
+    .service-card {
+        padding: 15px;
+    }
 
-  .service-card {
-    padding: 15px;
-  }
+    .service-card h3 {
+        font-size: 0.9rem;
+        margin-bottom: 11px;
+    }
 
-  .service-card h3 {
-    font-size: 0.9rem;
-    margin-bottom: 11px;
-  }
+    .service-card h5 {
+        font-size: 0.7rem;
+    }
 
-  .service-card h5 {
-    font-size: 0.7rem;
-  }
-
-  .service-card p {
-    font-size: 0.64rem;
-    line-height: 1.6;
-  }
+    .service-card p {
+        font-size: 0.64rem;
+        line-height: 1.6;
+    }
 }
-
-
-
-

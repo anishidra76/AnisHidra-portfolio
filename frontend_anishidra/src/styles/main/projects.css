@@ -1,320 +1,251 @@
-/* ----- Projects Section ----- */
+/* =====     PROJECTS Section     ===== */
+
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 24px;
-  width: 100%;
-  margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    width: 100%;
+    margin-top: 40px;
 }
-
 .project-card.glow-card {
-  padding: 0;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
-
 .project-thumb {
-  position: relative;
-  height: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, rgba(0, 240, 255, 0.15), rgba(112, 0, 255, 0.25));
-  border-bottom: 1px solid rgba(0, 240, 255, 0.15);
+    position: relative;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 240, 255, 0.15),
+        rgba(112, 0, 255, 0.25)
+    );
+    border-bottom: 1px solid rgba(0, 240, 255, 0.15);
 }
 .project-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border: 8px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 8px;
 }
 .project-tag {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  background: rgba(3, 4, 15, 0.7);
-  border: 1px solid rgba(0, 240, 255, 0.3);
-  color: var(--primary-sky);
-  backdrop-filter: blur(4px);
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    background: rgba(3, 4, 15, 0.7);
+    border: 1px solid rgba(0, 240, 255, 0.3);
+    color: var(--primary-sky);
+    backdrop-filter: blur(4px);
 }
-
 .project-body {
-  padding: 20px 24px 24px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+    padding: 20px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 .project-body h4 {
-  font-size: 1.15rem;
-  margin-bottom: 10px;
+    font-size: 1.15rem;
+    margin-bottom: 10px;
 }
 .project-body h3 {
-  font-size: 1rem;
-  margin-bottom: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px;
 }
 .project-desc {
-  color: var(--text-muted);
-  font-size: 0.9rem;
-  flex: 1;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    flex: 1;
 }
 
 .project-footer {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .project-icons {
-  display: flex;
-  gap: 14px;
+    display: flex;
+    gap: 14px;
 }
 .project-icons a {
-  color: var(--text-muted);
-  font-size: 1rem;
-  transition: color 0.25s ease;
+    color: var(--text-muted);
+    font-size: 1rem;
+    transition: color 0.25s ease;
 }
 .project-icons a:hover {
-  color: var(--primary-sky);
+    color: var(--primary-sky);
 }
 .project-more {
-  color: var(--primary-sky);
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: gap 0.25s ease;
+    color: var(--primary-sky);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.25s ease;
 }
 .project-more:hover {
-  gap: 10px;
-  text-decoration: underline;
+    gap: 10px;
+    text-decoration: underline;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   PROJECTS — RESPONSIVE
-   ========================================================================== */
-
-
-/* ==========================================================================
-   TABLET — 769px to 1024px
-   ========================================================================== */
+/* =====     TABLET — 769px to 1024px     ===== */
 
 @media (min-width: 769px) and (max-width: 1024px) {
-
-  #projects .section-title {
-    font-size: 3rem;
-    margin-bottom: 55px;
-  }
-
-  .projects-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-    margin-top: 30px;
-  }
-
-  .project-thumb {
-    height: 150px;
-  }
-
-  .project-tag {
-    top: 10px;
-    left: 10px;
-    font-size: 0.65rem;
-  }
-
-  .project-body {
-    padding: 18px 20px 20px;
-  }
-
-  .project-body h4 {
-    font-size: 1rem;
-    margin-bottom: 8px;
-  }
-
-  .project-body h3 {
-    font-size: 0.9rem;
-    margin-bottom: 8px;
-  }
-
-  .project-desc {
-    font-size: 0.78rem;
-    line-height: 1.6;
-  }
-
-  .project-footer {
-    margin-top: 17px;
-  }
-
-  .project-icons {
-    gap: 12px;
-  }
-
-  .project-icons a {
-    font-size: 0.9rem;
-  }
-
-  .project-more {
-    font-size: 0.78rem;
-  }
+    #projects .section-title {
+        font-size: 3rem;
+        margin-bottom: 55px;
+    }
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
+    .project-thumb {
+        height: 150px;
+    }
+    .project-tag {
+        top: 10px;
+        left: 10px;
+        font-size: 0.65rem;
+    }
+    .project-body {
+        padding: 18px 20px 20px;
+    }
+    .project-body h4 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+    .project-body h3 {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+    .project-desc {
+        font-size: 0.78rem;
+        line-height: 1.6;
+    }
+    .project-footer {
+        margin-top: 17px;
+    }
+    .project-icons {
+        gap: 12px;
+    }
+    .project-icons a {
+        font-size: 0.9rem;
+    }
+    .project-more {
+        font-size: 0.78rem;
+    }
 }
 
-
-/* ==========================================================================
-   MOBILE — 768px and below
-   ========================================================================== */
+/* =====     MOBILE — 768px and below     ===== */
 
 @media (max-width: 768px) {
-
-  #projects .section-title {
-    font-size: clamp(2.3rem, 9vw, 3rem);
-    margin-bottom: 40px;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    width: 100%;
-    margin-top: 25px;
-  }
-
-  .project-card.glow-card {
-    width: 100%;
-  }
-
-  .project-thumb {
-    height: 180px;
-  }
-
-  .project-tag {
-    top: 10px;
-    left: 10px;
-    padding: 4px 9px;
-    font-size: 0.62rem;
-  }
-
-  .project-body {
-    padding: 17px 18px 19px;
-  }
-
-  .project-body h4 {
-    font-size: 0.9rem;
-    margin-bottom: 7px;
-  }
-
-  .project-body h3 {
-    font-size: 0.82rem;
-    margin-bottom: 8px;
-  }
-
-  .project-desc {
-    font-size: 0.75rem;
-    line-height: 1.6;
-  }
-
-  .project-footer {
-    margin-top: 16px;
-  }
-
-  .project-icons {
-    gap: 12px;
-  }
-
-  .project-icons a {
-    font-size: 0.9rem;
-  }
-
-  .project-more {
-    font-size: 0.75rem;
-    gap: 5px;
-  }
+    #projects .section-title {
+        font-size: clamp(2.3rem, 9vw, 3rem);
+        margin-bottom: 40px;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        width: 100%;
+        margin-top: 25px;
+    }
+    .project-card.glow-card {
+        width: 100%;
+    }
+    .project-thumb {
+        height: 180px;
+    }
+    .project-tag {
+        top: 10px;
+        left: 10px;
+        padding: 4px 9px;
+        font-size: 0.62rem;
+    }
+    .project-body {
+        padding: 17px 18px 19px;
+    }
+    .project-body h4 {
+        font-size: 0.9rem;
+        margin-bottom: 7px;
+    }
+    .project-body h3 {
+        font-size: 0.82rem;
+        margin-bottom: 8px;
+    }
+    .project-desc {
+        font-size: 0.75rem;
+        line-height: 1.6;
+    }
+    .project-footer {
+        margin-top: 16px;
+    }
+    .project-icons {
+        gap: 12px;
+    }
+    .project-icons a {
+        font-size: 0.9rem;
+    }
+    .project-more {
+        font-size: 0.75rem;
+        gap: 5px;
+    }
 }
 
-
-/* ==========================================================================
-   SMALL MOBILE — 480px and below
-   ========================================================================== */
+/* =====     SMALL MOBILE — 480px and below     ===== */
 
 @media (max-width: 480px) {
-
-  #projects .section-title {
-    font-size: 2.2rem;
-    margin-bottom: 35px;
-  }
-
-  .projects-grid {
-    gap: 15px;
-    margin-top: 20px;
-  }
-
-  .project-thumb {
-    height: 155px;
-  }
-
-  .project-tag {
-    top: 8px;
-    left: 8px;
-    padding: 3px 8px;
-    font-size: 0.58rem;
-  }
-
-  .project-body {
-    padding: 15px 15px 17px;
-  }
-
-  .project-body h4 {
-    font-size: 0.82rem;
-  }
-
-  .project-body h3 {
-    font-size: 0.75rem;
-  }
-
-  .project-desc {
-    font-size: 0.68rem;
-    line-height: 1.6;
-  }
-
-  .project-footer {
-    margin-top: 14px;
-  }
-
-  .project-icons {
-    gap: 10px;
-  }
-
-  .project-icons a {
-    font-size: 0.82rem;
-  }
-
-  .project-more {
-    font-size: 0.68rem;
-  }
+    #projects .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 35px;
+    }
+    .projects-grid {
+        gap: 15px;
+        margin-top: 20px;
+    }
+    .project-thumb {
+        height: 155px;
+    }
+    .project-tag {
+        top: 8px;
+        left: 8px;
+        padding: 3px 8px;
+        font-size: 0.58rem;
+    }
+    .project-body {
+        padding: 15px 15px 17px;
+    }
+    .project-body h4 {
+        font-size: 0.82rem;
+    }
+    .project-body h3 {
+        font-size: 0.75rem;
+    }
+    .project-desc {
+        font-size: 0.68rem;
+        line-height: 1.6;
+    }
+    .project-footer {
+        margin-top: 14px;
+    }
+    .project-icons {
+        gap: 10px;
+    }
+    .project-icons a {
+        font-size: 0.82rem;
+    }
+    .project-more {
+        font-size: 0.68rem;
+    }
 }

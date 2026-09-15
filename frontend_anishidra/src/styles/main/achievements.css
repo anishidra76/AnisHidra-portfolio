@@ -1,439 +1,328 @@
-/* ----- Achievments Section ----- */
+/* =====     ACHIEVEMENTS Section     ===== */
+
 .competitive-section {
-  padding: 10px 0;
+    padding: 10px 0;
 }
-
 .competitive-subtitle {
-  text-align: center;
-  color: var(--text-muted);
-  font-size: 1.05rem;
-  margin: -35px auto 50px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin: -35px auto 50px;
 }
-
 .competitive-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  max-width: 1400px;
-  margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1400px;
+    margin: auto;
 }
-
 .competitive-card {
-  padding: 24px;
-  border: 1px solid rgba(0, 240, 255, 0.2);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.025);
-  backdrop-filter: blur(12px);
-  transition: 0.35s ease;
-  position: relative;
-  overflow: hidden;
+    padding: 24px;
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.025);
+    backdrop-filter: blur(12px);
+    transition: 0.35s ease;
+    position: relative;
+    overflow: hidden;
 }
-
 .competitive-card::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--primary-sky);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: 0.35s ease;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-sky);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.35s ease;
 }
-
 .competitive-card:hover {
-  transform: translateY(-7px);
-  border-color: var(--primary-sky);
-  box-shadow: 0 0 30px rgba(0, 240, 255, 0.12);
+    transform: translateY(-7px);
+    border-color: var(--primary-sky);
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.12);
 }
-
 .competitive-card:hover::after {
-  transform: scaleX(1);
+    transform: scaleX(1);
 }
-
-/* Header */
-
 .profile-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
-
 .profile-icon {
-  width: 58px;
-  height: 58px;
-  min-width: 58px;
-  border: 1px solid rgba(0, 240, 255, 0.35);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--primary-sky);
-  font-size: 1.35rem;
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    border: 1px solid rgba(0, 240, 255, 0.35);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-sky);
+    font-size: 1.35rem;
 }
-
 .profile-info {
-  flex: 1;
+    flex: 1;
 }
-
 .profile-info h3 {
-  margin: 0 0 5px;
-  font-size: 1.25rem;
+    margin: 0 0 5px;
+    font-size: 1.25rem;
 }
-
 .profile-info a {
-  color: var(--primary-sky);
-  font-size: 0.8rem;
-  text-decoration: none;
+    color: var(--primary-sky);
+    font-size: 0.8rem;
+    text-decoration: none;
 }
-
 .profile-info a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
-
 .external-icon {
-  color: var(--primary-sky);
-  font-size: 1rem;
+    color: var(--primary-sky);
+    font-size: 1rem;
 }
-
-/* Divider */
-
 .profile-divider {
-  height: 1px;
-  background: rgba(255, 255, 255, 0.1);
-  margin: 20px 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 20px 0;
 }
-
-/* Description */
-
 .profile-description {
-  color: var(--text-muted);
-  line-height: 1.6;
-  min-height: 52px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    min-height: 52px;
 }
-
-/* Stats */
-
 .profile-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 25px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 25px 0;
 }
-
 .profile-stat {
-  text-align: center;
-  border-right: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
 }
-
 .profile-stat:last-child {
-  border-right: none;
+    border-right: none;
 }
-
 .profile-stat strong {
-  display: block;
-  color: var(--primary-sky);
-  font-size: 0.90rem;
-  margin-bottom: 5px;
+    display: block;
+    color: var(--primary-sky);
+    font-size: 0.9rem;
+    margin-bottom: 5px;
 }
-
 .profile-stat span {
-  color: var(--text-muted);
-  font-size: 0.75rem;
+    color: var(--text-muted);
+    font-size: 0.75rem;
 }
-
-/* Button */
-
 .profile-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 14px;
-  padding: 12px;
-  border: 1px solid rgba(0, 240, 255, 0.25);
-  border-radius: 10px;
-  color: var(--primary-sky);
-  text-decoration: none;
-  transition: 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    padding: 12px;
+    border: 1px solid rgba(0, 240, 255, 0.25);
+    border-radius: 10px;
+    color: var(--primary-sky);
+    text-decoration: none;
+    transition: 0.3s ease;
 }
-
 .profile-button:hover {
-  background: rgba(0, 240, 255, 0.08);
-  border-color: var(--primary-sky);
+    background: rgba(0, 240, 255, 0.08);
+    border-color: var(--primary-sky);
 }
-
 .profile-button i {
-  transition: 0.3s ease;
+    transition: 0.3s ease;
 }
-
 .profile-button:hover i {
-  transform: translateX(5px);
+    transform: translateX(5px);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   ACHIEVEMENTS — RESPONSIVE
-   ========================================================================== */
-
-
-/* ==========================================================================
-   TABLET — 769px to 1024px
-   ========================================================================== */
+/* =====     TABLET — 769px to 1024px     ===== */
 
 @media (min-width: 769px) and (max-width: 1024px) {
-
-  #achievements .section-title {
-    font-size: 3rem;
-    margin-bottom: 60px;
-  }
-
-  .competitive-subtitle {
-    max-width: 85%;
-    font-size: 0.9rem;
-    margin: -25px auto 40px;
-    line-height: 1.6;
-  }
-
-  .competitive-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
-    width: 100%;
-  }
-
-  .competitive-card {
-    padding: 20px;
-  }
-
-  .profile-header {
-    gap: 12px;
-  }
-
-  .profile-icon {
-    width: 52px;
-    height: 52px;
-    min-width: 52px;
-    font-size: 1.2rem;
-  }
-
-  .profile-info h3 {
-    font-size: 1.05rem;
-  }
-
-  .profile-info a {
-    font-size: 0.7rem;
-    word-break: break-word;
-  }
-
-  .external-icon {
-    font-size: 0.85rem;
-  }
-
-  .profile-description {
-    font-size: 0.85rem;
-    line-height: 1.6;
-  }
-
-  .profile-stats {
-    margin: 20px 0;
-  }
-
-  .profile-stat strong {
-    font-size: 0.85rem;
-  }
-
-  .profile-stat span {
-    font-size: 0.68rem;
-  }
-
-  .profile-button {
-    padding: 10px;
-    font-size: 0.8rem;
-  }
+    #achievements .section-title {
+        font-size: 3rem;
+        margin-bottom: 60px;
+    }
+    .competitive-subtitle {
+        max-width: 85%;
+        font-size: 0.9rem;
+        margin: -25px auto 40px;
+        line-height: 1.6;
+    }
+    .competitive-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+        width: 100%;
+    }
+    .competitive-card {
+        padding: 20px;
+    }
+    .profile-header {
+        gap: 12px;
+    }
+    .profile-icon {
+        width: 52px;
+        height: 52px;
+        min-width: 52px;
+        font-size: 1.2rem;
+    }
+    .profile-info h3 {
+        font-size: 1.05rem;
+    }
+    .profile-info a {
+        font-size: 0.7rem;
+        word-break: break-word;
+    }
+    .external-icon {
+        font-size: 0.85rem;
+    }
+    .profile-description {
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+    .profile-stats {
+        margin: 20px 0;
+    }
+    .profile-stat strong {
+        font-size: 0.85rem;
+    }
+    .profile-stat span {
+        font-size: 0.68rem;
+    }
+    .profile-button {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
 }
 
-
-/* ==========================================================================
-   MOBILE — 768px and below
-   ========================================================================== */
+/* =====     MOBILE — 768px and below     ===== */
 
 @media (max-width: 768px) {
-
-  #achievements .section-title {
-    font-size: clamp(2.3rem, 9vw, 3rem);
-    margin-bottom: 40px;
-  }
-
-  .competitive-subtitle {
-    width: 90%;
-    font-size: 0.8rem;
-    line-height: 1.6;
-    margin: -15px auto 35px;
-  }
-
-  .competitive-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    width: 100%;
-  }
-
-  .competitive-card {
-    width: 100%;
-    padding: 18px;
-    border-radius: 15px;
-  }
-
-  .profile-header {
-    gap: 11px;
-  }
-
-  .profile-icon {
-    width: 48px;
-    height: 48px;
-    min-width: 48px;
-    font-size: 1.1rem;
-  }
-
-  .profile-info {
-    min-width: 0;
-  }
-
-  .profile-info h3 {
-    font-size: 0.95rem;
-    margin-bottom: 4px;
-  }
-
-  .profile-info a {
-    display: block;
-    font-size: 0.65rem;
-    overflow-wrap: anywhere;
-    line-height: 1.4;
-  }
-
-  .external-icon {
-    font-size: 0.8rem;
-  }
-
-  .profile-divider {
-    margin: 16px 0;
-  }
-
-  .profile-description {
-    font-size: 0.78rem;
-    line-height: 1.6;
-    min-height: auto;
-  }
-
-  .profile-stats {
-    margin: 20px 0;
-  }
-
-  .profile-stat strong {
-    font-size: 0.78rem;
-  }
-
-  .profile-stat span {
-    font-size: 0.62rem;
-    line-height: 1.3;
-  }
-
-  .profile-button {
-    padding: 10px;
-    font-size: 0.75rem;
-    gap: 10px;
-  }
+    #achievements .section-title {
+        font-size: clamp(2.3rem, 9vw, 3rem);
+        margin-bottom: 40px;
+    }
+    .competitive-subtitle {
+        width: 90%;
+        font-size: 0.8rem;
+        line-height: 1.6;
+        margin: -15px auto 35px;
+    }
+    .competitive-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        width: 100%;
+    }
+    .competitive-card {
+        width: 100%;
+        padding: 18px;
+        border-radius: 15px;
+    }
+    .profile-header {
+        gap: 11px;
+    }
+    .profile-icon {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        font-size: 1.1rem;
+    }
+    .profile-info {
+        min-width: 0;
+    }
+    .profile-info h3 {
+        font-size: 0.95rem;
+        margin-bottom: 4px;
+    }
+    .profile-info a {
+        display: block;
+        font-size: 0.65rem;
+        overflow-wrap: anywhere;
+        line-height: 1.4;
+    }
+    .external-icon {
+        font-size: 0.8rem;
+    }
+    .profile-divider {
+        margin: 16px 0;
+    }
+    .profile-description {
+        font-size: 0.78rem;
+        line-height: 1.6;
+        min-height: auto;
+    }
+    .profile-stats {
+        margin: 20px 0;
+    }
+    .profile-stat strong {
+        font-size: 0.78rem;
+    }
+    .profile-stat span {
+        font-size: 0.62rem;
+        line-height: 1.3;
+    }
+    .profile-button {
+        padding: 10px;
+        font-size: 0.75rem;
+        gap: 10px;
+    }
 }
 
-
-/* ==========================================================================
-   SMALL MOBILE — 480px and below
-   ========================================================================== */
+/* =====     SMALL MOBILE — 480px and below     ===== */
 
 @media (max-width: 480px) {
-
-  #achievements .section-title {
-    font-size: 2.2rem;
-    margin-bottom: 35px;
-  }
-
-  .competitive-subtitle {
-    width: 95%;
-    font-size: 0.7rem;
-    margin: -10px auto 30px;
-  }
-
-  .competitive-grid {
-    gap: 15px;
-  }
-
-  .competitive-card {
-    padding: 15px;
-    border-radius: 13px;
-  }
-
-  .profile-icon {
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
-    font-size: 1rem;
-  }
-
-  .profile-header {
-    gap: 9px;
-  }
-
-  .profile-info h3 {
-    font-size: 0.85rem;
-  }
-
-  .profile-info a {
-    font-size: 0.58rem;
-  }
-
-  .external-icon {
-    font-size: 0.7rem;
-  }
-
-  .profile-divider {
-    margin: 14px 0;
-  }
-
-  .profile-description {
-    font-size: 0.7rem;
-  }
-
-  .profile-stats {
-    margin: 17px 0;
-  }
-
-  .profile-stat strong {
-    font-size: 0.70rem;
-  }
-
-  .profile-stat span {
-    font-size: 0.55rem;
-  }
-
-  .profile-button {
-    font-size: 0.68rem;
-    padding: 9px;
-  }
+    #achievements .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 35px;
+    }
+    .competitive-subtitle {
+        width: 95%;
+        font-size: 0.7rem;
+        margin: -10px auto 30px;
+    }
+    .competitive-grid {
+        gap: 15px;
+    }
+    .competitive-card {
+        padding: 15px;
+        border-radius: 13px;
+    }
+    .profile-icon {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        font-size: 1rem;
+    }
+    .profile-header {
+        gap: 9px;
+    }
+    .profile-info h3 {
+        font-size: 0.85rem;
+    }
+    .profile-info a {
+        font-size: 0.58rem;
+    }
+    .external-icon {
+        font-size: 0.7rem;
+    }
+    .profile-divider {
+        margin: 14px 0;
+    }
+    .profile-description {
+        font-size: 0.7rem;
+    }
+    .profile-stats {
+        margin: 17px 0;
+    }
+    .profile-stat strong {
+        font-size: 0.7rem;
+    }
+    .profile-stat span {
+        font-size: 0.55rem;
+    }
+    .profile-button {
+        font-size: 0.68rem;
+        padding: 9px;
+    }
 }
-

@@ -6,7 +6,6 @@
     background: #0f1720;
     padding: 20px;
 }
-
 .loginCard {
     width: 100%;
     max-width: 420px;
@@ -15,7 +14,6 @@
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
 }
-
 .logo {
     display: flex;
     justify-content: center;
@@ -23,37 +21,31 @@
     gap: 2px;
     margin-bottom: 25px;
 }
-
 .logo span {
     font-size: 32px;
     font-weight: 800;
     color: #cbb07b;
 }
-
 .loginCard h1 {
     margin: 0;
     text-align: center;
     color: #1b2936;
     font-size: 30px;
 }
-
 .loginCard > p {
     margin: 10px 0 30px;
     text-align: center;
     color: #777;
 }
-
 .inputGroup {
     margin-bottom: 20px;
 }
-
 .inputGroup label {
     display: block;
     margin-bottom: 8px;
     color: #1b2936;
     font-weight: 600;
 }
-
 .inputGroup input {
     width: 100%;
     box-sizing: border-box;
@@ -63,11 +55,9 @@
     outline: none;
     font-size: 15px;
 }
-
 .inputGroup input:focus {
     border-color: #cbb07b;
 }
-
 .loginCard button {
     width: 100%;
     padding: 14px;
@@ -80,16 +70,13 @@
     cursor: pointer;
     transition: 0.3s;
 }
-
 .loginCard button:hover {
     background: #cbb07b;
     color: #1b2936;
 }
-
 .loginCard button i {
     margin-right: 8px;
 }
-
 .error {
     margin-bottom: 15px;
     color: #d33;

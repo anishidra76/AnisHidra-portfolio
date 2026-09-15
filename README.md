@@ -81,19 +81,19 @@
 
 =>  Frontend
 
-    ---> JavaScript - Html5 - Css3 - Jsx - React - Font Awesome
+    ---> JavaScript - Html5 - Css3 - Jsx - React - Font Awesome...
 
 =>  Backend
 
-    ---> Python - Django - Django REST Framework - Django-cors-headers - Token Authentication
+    ---> Python - Django - Django REST Framework - Django-cors-headers - Token Authentication - CORS - CSRF...
 
 =>  Database
 
-    ---> SQLite
+    ---> PostgreSQL
 
 =>  Deployment
 
-    ---> Gunicorn - Nginx - Namecheap - Render
+    ---> Gunicorn - Nginx - Namecheap - Render - CloudFlare - Neon - Cloudinary
 
 
 
@@ -235,12 +235,16 @@
     =>  Live Portfolio  ---> https://anishidra.com
 
     =>  GitHub          ---> https://github.com/anishidra76
+                        --->  @anishidra76
 
     =>  LinkedIn        ---> https://linkedin.com/in/anishidra76
+                        --->  @anishidra76
 
     =>  Discord         ---> https://discord.com/users/1522648106154463356
+                        --->  @anishidra76
 
     =>  X (Twitter)     ---> https://x.com/anishidra76
+                        --->  @anishidra76
 
     => Email            ---> anishidracontact@gmail.com
 

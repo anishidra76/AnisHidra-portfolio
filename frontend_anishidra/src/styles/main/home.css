@@ -249,7 +249,7 @@
 
 /* =====     MOBILE — 768px and below     ===== */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     #home {
         display: flex;
         flex-direction: column;

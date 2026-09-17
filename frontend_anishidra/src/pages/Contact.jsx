@@ -193,11 +193,11 @@ export default function Contact() {
                     <div className="contact-info">
                         <div className="info-item">
                             <i className="fa-solid fa-envelope"></i>
-                            <span>anishidracontact@gmail.com</span>
+                            <span data-nosnippet>anishidracontact@gmail.com</span>
                         </div>
                         <div className="info-item">
                             <i className="fa-brands fa-whatsapp"></i>
-                            <span>+213 541 174 042</span>
+                            <span data-nosnippet>+213 541 174 042</span>
                         </div>
                         <div className="info-item">
                             <i className="fa-brands fa-telegram"></i>

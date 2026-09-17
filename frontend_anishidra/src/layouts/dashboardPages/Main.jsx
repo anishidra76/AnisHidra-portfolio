@@ -56,7 +56,6 @@ const Main = () => {
                 return response.json();
             })
             .then(() => {
-                console.log("SAVED DATA:", data);
                 alert("Home information saved successfully!");
             })
             .catch((error) => {
@@ -72,7 +71,6 @@ const Main = () => {
     const [about, setAbout] = useState([]);
 
     useEffect(() => {
-        console.log("useEffect started");
         fetch(`${API_URL}/api/about/aboutcontents/`)
             .then((response) => {
                 if (!response.ok) {
@@ -81,7 +79,6 @@ const Main = () => {
                 return response.json();
             })
             .then((data) => {
-                console.log("About data:", data);
                 setAbout(data);
             })
             .catch((error) => {
@@ -104,10 +101,8 @@ const Main = () => {
                 },
             );
             const data = await response.json();
-            console.log("Updated", data);
             setAbout([data]);
             alert("About information saved successfully!");
-            console.log("About Image", about[0].image);
         } catch (error) {
             console.error("Error", error);
         }
@@ -1578,7 +1573,6 @@ const Main = () => {
         try {
             const updatedServices = [];
             for (const service of services) {
-                console.log("SAVING SERVICES:", service);
 
                 const data = {
                     domain: service.domain,
@@ -1617,7 +1611,6 @@ const Main = () => {
                 updatedServices.push(result);
             }
             setServices(updatedServices);
-            console.log("ALL SERVICES SAVED");
             alert("Services information saved successfully!");
         } catch (error) {
             console.error("SAVE ERROR:", error);

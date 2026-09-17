@@ -11,7 +11,7 @@ export default function About() {
                 setAbout(data);
             })
             .catch((error) => {
-                console.log("Error", error);
+                console.error("Error:", error);
             });
     }, []);
 

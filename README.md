@@ -85,11 +85,7 @@
 
 =>  Backend
 
-    ---> Python - Django - Django REST Framework - Django-cors-headers - Token Authentication - CORS - CSRF...
-
-=>  Database
-
-    ---> PostgreSQL
+    ---> Python - Django - Django REST Framework - PostgreSQL
 
 =>  Deployment
 

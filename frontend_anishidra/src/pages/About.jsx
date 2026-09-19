@@ -31,7 +31,7 @@ export default function About() {
                         }
                         alt="Portrait of Anis Hidra"
                         className="about-photo"
-                        loading="lazy"
+                        fetchPriority="high"
                     />
                     <p className="about-text">{about[0]?.description}</p>
                 </div>
